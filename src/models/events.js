@@ -14,15 +14,6 @@ const schema = {
     primaryKey: true,
   },
 
-  user_id: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    foreignKey: {
-      references: User,
-      key: "id",
-    },
-  },
-
   title: {
     type: DataTypes.STRING,
     allowNull: false,
