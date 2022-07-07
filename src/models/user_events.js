@@ -4,7 +4,9 @@ const connection = require("../config/connection");
 
 const User = require("./user");
 
-class Friends extends Model {}
+const Events = require("./events");
+
+class UserEvents extends Model {}
 
 const schema = {
   id: {
@@ -23,18 +25,13 @@ const schema = {
     },
   },
 
-  friends_id: {
+  event_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
     foreignKey: {
-      references: User,
+      references: Events,
       key: "id",
     },
-  },
-
-  status: {
-    type: DataTypes.BOOLEAN,
-    defaultValue: false,
   },
 };
 
@@ -42,9 +39,9 @@ const options = {
   sequelize: connection,
   timestamps: true,
   freezeTableName: true,
-  modelName: "friends",
+  modelName: "userEvents",
 };
 
-Friends.init(schema, options);
+UserEvents.init(schema, options);
 
-module.exports = Friends;
+module.exports = UserEvents;
