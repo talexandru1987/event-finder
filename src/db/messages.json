@@ -1,0 +1,12 @@
+[
+  {
+    "user_id": "Bob",
+    "friends_id": "Smith",
+    "events_id": "Bsmith"
+  },
+  {
+    "user_id": "Bob",
+    "friends_id": "Smith",
+    "events_id": "Bsmith"
+  }
+]

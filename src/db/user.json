@@ -1,0 +1,18 @@
+[
+  {
+    "first_name": "Bob",
+    "last_name": "Smith",
+    "user_name": "Bsmith",
+    "password": "abcd123",
+    "profile_img_url": "https://media.istockphoto.com/vectors/user-icon-flat-isolated-on-white-background-user-symbol-vector-vector-id1300845620?s=612x612",
+    "date_of_birth": "27/03/2000"
+  },
+  {
+    "first_name": "Alice",
+    "last_name": "Smith",
+    "user_name": "Asmith",
+    "password": "abcd123",
+    "profile_img_url": "https://media.istockphoto.com/vectors/user-icon-flat-isolated-on-white-background-user-symbol-vector-vector-id1300845620?s=612x612",
+    "date_of_birth": "27/05/2005"
+  }
+]
