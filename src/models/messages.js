@@ -36,7 +36,7 @@ const schema = {
 
   events_id: {
     type: DataTypes.INTEGER,
-    allowNull: false,
+    allowNull: true,
     foreignKey: {
       references: Events,
       key: "id",

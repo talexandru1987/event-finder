@@ -10,7 +10,7 @@ const DB_PASSWORD = process.env.DB_PASSWORD;
 const options = {
   host: DB_HOST,
   dialect: "mysql",
-  port: 3400,
+  port: 3306,
   logging: false,
 };
 
