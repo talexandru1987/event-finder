@@ -9,10 +9,6 @@ body {
   font-family: "Satisfy", cursive; */
 }
 
-.home-title {
-  padding: 0;
-}
-
 .home-image {
   width: 1920px;
   height: auto;
@@ -22,15 +18,66 @@ body {
   position: relative;
   text-align: center;
   color: white;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-/* Centered text */
+/* h1 title */
 .home-text {
   position: absolute;
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 100px;
+  padding-bottom: 20px;
+}
+
+/* Container for Search Buttons */
+.search-container {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-box {
+  background: rgba(255, 255, 255, 0.4);
+  width: 100%;
+  border-radius: 60px;
+  padding: 5px 5px;
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 30px;
+}
+
+.search-box button img {
+  width: 25px;
+}
+
+.search-box button {
+  border: 0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: #895cf8;
+  cursor: pointer;
+}
+
+::placeholder {
+  color: #895cf8;
 }
 
 @media only screen and (max-width: 600px) {
