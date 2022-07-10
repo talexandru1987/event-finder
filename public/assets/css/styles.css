@@ -30,6 +30,7 @@ body {
   transform: translate(-50%, -50%);
   font-size: 100px;
   padding-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 /* Container for Search Buttons */
@@ -42,6 +43,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .search-box {
@@ -82,9 +84,25 @@ body {
 
 @media only screen and (max-width: 600px) {
   .home-image {
-    width: 375px;
+    width: 100%;
   }
   .home-text {
-    font-size: 30px;
+    font-size: 12vw;
+    padding-bottom: 0;
+    padding-top: 12px;
+    top: 45%;
+  }
+  .search-container {
+    top: 48%;
+  }
+  .search-box {
+    background: #895cf8;
+    opacity: 0.9;
+  }
+  .search-box input {
+    color: white;
+  }
+  ::placeholder {
+    color: white;
   }
 } ;
