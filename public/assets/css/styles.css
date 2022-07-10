@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Bebas Neue", cursive;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Satisfy", cursive;
+}
