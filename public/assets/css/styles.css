@@ -108,8 +108,9 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
-  background: rgba(255, 255, 255, 0.927);
+  background: rgba(255, 255, 255, 0.768);
   border-radius: 10px;
+  backdrop-filter: blur(4px);
 }
 
 .login-center h1 {
