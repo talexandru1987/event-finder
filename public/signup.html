@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Login | What's On</title>
+    <title>Sign Up | What's On</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -57,7 +57,7 @@
               <a class="nav-link" href="#">Saved Events</a>
             </li>
             <li>
-              <a class="nav-link" href="#">Login</a>
+              <a class="nav-link" href="./login.html">Login</a>
             </li>
             <li>
               <a class="nav-link" href="#">Contact</a>
@@ -71,28 +71,39 @@
     <!-- Home Page Image and Title -->
     <div class="home-container">
       <img
-        src="./assets/images/home-page-images/concert-orange.jpg"
+        src="./assets/images/home-page-images/concert-purple.jpg"
         class="home-image"
         alt="crowd at a concert"
       />
     </div>
 
-    <!-- Login -->
+    <!-- Sign Up -->
     <div class="login-center">
-      <h1>Login</h1>
+      <h1>Sign Up to What's On!</h1>
       <form method="post">
+        <!-- first name -->
+        <div class="text-field">
+          <input type="text" required />
+          <label>First Name</label>
+        </div>
+        <!-- last name -->
+        <div class="text-field">
+          <input type="text" required />
+          <label>Last Name</label>
+        </div>
+        <!-- email -->
         <div class="text-field">
           <input type="text" required />
           <label>Email</label>
         </div>
+        <!-- password -->
         <div class="text-field">
           <input type="password" required />
           <label>Password</label>
         </div>
-        <div class="pass">Forgot Password?</div>
-        <input type="submit" value="Login" />
+        <input type="submit" value="Sign Up" />
         <div class="signup-link">
-          Not a member? <a href="./signup.html">Sign Up</a>
+          Already a member? <a href="./login.html">Login</a>
         </div>
       </form>
     </div>
