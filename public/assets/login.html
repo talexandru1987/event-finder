@@ -20,7 +20,7 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- Nav Bar -->
@@ -28,7 +28,7 @@
       <nav class="navbar navbar-expand-sm navbar-light">
         <a class="navbar-brand" href="#">
           <img
-            src="./assets/images/bootstrap-logo.svg"
+            src="./images/bootstrap-logo.svg"
             alt="Bootstrap"
             width="30"
             height="24"
@@ -71,31 +71,28 @@
     <!-- Home Page Image and Title -->
     <div class="home-container">
       <img
-        src="./assets/images/home-page-images/paint-crowd.jpg"
+        src="./images/home-page-images/concert-orange.jpg"
         class="home-image"
         alt="crowd at a concert"
       />
-      <h1 class="home-text">
-        Find Out <span class="purple">What's On</span> Near You!
-      </h1>
     </div>
 
-    <!-- Search Buttons -->
-    <div class="search-container">
-      <form
-        action="https://www.google.com/search"
-        method="get"
-        class="search-box"
-      >
-        <input type="text" placeholder="Enter Your Postcode" name="q" />
-        <button type="submit">
-          <img src="./assets/images/home-page-images/search.png" />
-        </button>
+    <!-- Login -->
+    <div class="login-center">
+      <h1>Login</h1>
+      <form method="post">
+        <div class="text-field">
+          <input type="text" required />
+          <label>Email</label>
+        </div>
+        <div class="text-field">
+          <input type="password" required />
+          <label>Password</label>
+        </div>
+        <div class="pass">Forgot Password?</div>
+        <input type="submit" value="login" />
+        <div class="signup-link">Not a member? <a href="#">Sign Up</a></div>
       </form>
-    </div>
-
-    <div>
-      <h2 class="h2-title">Discover the best events in town!</h2>
     </div>
 
     <script src="./assets/js/index.js" async defer></script>
