@@ -9,6 +9,10 @@ body {
   /* font-family: "Satisfy", cursive; */
 }
 
+.flex-container {
+  display: flex;
+}
+
 .home-image {
   width: 1920px;
   height: auto;
@@ -17,7 +21,6 @@ body {
 .home-container {
   position: relative;
   text-align: center;
-  color: white;
   display: flex;
   flex-wrap: wrap;
 }
@@ -27,6 +30,7 @@ body {
   position: absolute;
   top: 20%;
   left: 50%;
+  color: white;
   transform: translate(-50%, -50%);
   font-size: 100px;
   padding-bottom: 20px;
@@ -224,6 +228,7 @@ input[type="submit"]:hover {
 /* media query */
 @media only screen and (max-width: 600px) {
   /* HOME PAGE CSS */
+
   .home-image {
     width: 100%;
     height: 600px;
@@ -231,29 +236,17 @@ input[type="submit"]:hover {
     object-position: top right;
   }
   .home-text {
-    font-size: 14vw;
-    padding-bottom: 0;
-    padding-top: 12px;
-    top: 24%;
+    font-size: 12vw;
   }
   .search-container {
-    top: 45%;
   }
   .search-box {
-    opacity: 0.9;
   }
   .search-box input {
-    color: white;
-    text-align: center;
-    font-size: 30px;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.362);
   }
   ::placeholder {
     font-size: 30px;
   }
   .h2-title {
-    top: 58%;
-    font-size: 7vw;
-    padding-bottom: 0px;
   }
 } ;
