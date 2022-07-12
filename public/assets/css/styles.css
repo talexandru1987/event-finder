@@ -269,26 +269,12 @@ input[type="submit"]:hover {
 /* The friends cards */
 .friendsTable {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
+  place-items: center;
 }
-.img.card-image {
-  padding: 0;
-  overflow: hidden;
-}
-.img.card-image > img {
-  display: block;
-  width: 100%;
-  max-height: 200px;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  object-position: center;
-}
-.project-card {
-  background-color: #4a4e69ff;
-  --padding: 1rem;
-  border: none;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 0.25rem;
-  overflow: hidden;
+.card {
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3px;
+  justify-items: center;
+  align-items: center;
 }
