@@ -255,4 +255,11 @@ input[type="submit"]:hover {
     font-size: 8vw;
     top: 60%;
   }
+
+  /* LOGIN PAGE CSS */
+  .login-center {
+    width: 80%;
+    position: absolute;
+    top: 42%;
+  }
 } ;
