@@ -240,4 +240,55 @@ input[type="submit"]:hover {
   ::placeholder {
     color: white;
   }
-} ;
+}
+
+/* The friends page title */
+
+.heading {
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  text-align: center;
+}
+
+/* The profile image */
+.profileImage {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  display: block;
+  position: relative;
+  margin-top: 10px;
+  transition: 200ms transform ease-in-out;
+}
+
+.profileImage:hover {
+  transform: scale(1.025);
+}
+
+/* The friends cards */
+.friendsTable {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+.img.card-image {
+  padding: 0;
+  overflow: hidden;
+}
+.img.card-image > img {
+  display: block;
+  width: 100%;
+  max-height: 200px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+}
+.project-card {
+  background-color: #4a4e69ff;
+  --padding: 1rem;
+  border: none;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
