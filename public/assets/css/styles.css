@@ -45,7 +45,7 @@ body {
 /* Container for Search Buttons */
 .search-container {
   position: absolute;
-  top: 40%;
+  top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 5%;
@@ -100,7 +100,7 @@ body {
   text-align: center;
   transform: translate(-50%, -50%);
   font-size: 30px;
-  padding-bottom: 20px;
+
   text-shadow: 2px 2px 4px rgba(40, 5, 83, 0.506);
   font-family: "Satisfy", cursive;
 }
@@ -240,6 +240,7 @@ input[type="submit"]:hover {
   }
   .search-container {
     font-size: 6vw;
+    top: 40%;
   }
   .search-box {
     font-size: 6vw;
@@ -251,5 +252,7 @@ input[type="submit"]:hover {
     font-size: 6vw;
   }
   .h2-title {
+    font-size: 8vw;
+    top: 60%;
   }
 } ;
