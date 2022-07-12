@@ -239,13 +239,16 @@ input[type="submit"]:hover {
     font-size: 12vw;
   }
   .search-container {
+    font-size: 6vw;
   }
   .search-box {
+    font-size: 6vw;
   }
   .search-box input {
+    font-size: 6vw;
   }
   ::placeholder {
-    font-size: 30px;
+    font-size: 6vw;
   }
   .h2-title {
   }
