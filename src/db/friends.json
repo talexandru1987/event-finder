@@ -3,5 +3,20 @@
     "user_id": "1",
     "friends_id": "2",
     "status": true
+  },
+  {
+    "user_id": "2",
+    "friends_id": "3",
+    "status": false
+  },
+  {
+    "user_id": "3",
+    "friends_id": "4",
+    "status": true
+  },
+  {
+    "user_id": "4",
+    "friends_id": "2",
+    "status": false
   }
 ]

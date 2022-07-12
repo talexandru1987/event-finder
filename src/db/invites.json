@@ -10,5 +10,17 @@
     "friends_id": "1",
     "events_id": "1",
     "status": false
+  },
+  {
+    "user_id": "3",
+    "friends_id": "4",
+    "events_id": "3",
+    "status": true
+  },
+  {
+    "user_id": "4",
+    "friends_id": "2",
+    "events_id": "4",
+    "status": false
   }
 ]

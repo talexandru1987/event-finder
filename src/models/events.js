@@ -51,11 +51,11 @@ const schema = {
   },
 
   rating: {
-    type: DataTypes.STRING,
+    type: DataTypes.DOUBLE,
   },
 
   reviews: {
-    type: DataTypes.STRING,
+    type: DataTypes.INTEGER,
   },
 
   event_image_url: {
