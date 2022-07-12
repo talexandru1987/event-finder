@@ -216,28 +216,43 @@ input[type="submit"]:hover {
   text-decoration: underline;
 }
 
+/* images that only show on mobile viewports */
+.mobile-image {
+  display: none;
+}
+
 /* media query */
 @media only screen and (max-width: 600px) {
+  /* HOME PAGE CSS */
   .home-image {
     width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: top right;
   }
   .home-text {
     font-size: 12vw;
     padding-bottom: 0;
     padding-top: 12px;
-    top: 45%;
+    top: 26%;
   }
   .search-container {
-    top: 48%;
+    top: 38%;
   }
   .search-box {
-    background: #895cf8;
     opacity: 0.9;
   }
   .search-box input {
     color: white;
+    text-align: center;
+    font-size: 30px;
   }
   ::placeholder {
-    color: white;
+    font-size: 30px;
+  }
+  .h2-title {
+    top: 49%;
+    font-size: 24px;
+    padding-bottom: 0px;
   }
 } ;
