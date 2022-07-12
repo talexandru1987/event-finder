@@ -1,0 +1,14 @@
+[
+  {
+    "user_id": "1",
+    "friends_id": "2",
+    "events_id": "2",
+    "status": true
+  },
+  {
+    "user_id": "2",
+    "friends_id": "1",
+    "events_id": "1",
+    "status": false
+  }
+]

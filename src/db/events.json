@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Jaripeo Baile “Plaza R3",
+    "end_date": "21/11/2022",
+    "address": "2",
+    "event_link": true,
+    "start_date": true,
+    "map_img_url": true,
+    "google_map_link": true,
+    "rating": true,
+    "reviews": true,
+    "event_image_url": true,
+    "ticket_link": true,
+    "more_info_link": true,
+    "description": true
+  },
+  {
+    "title": "1",
+    "end_date": "2",
+    "address": "2",
+    "event_link": true,
+    "start_date": true,
+    "map_img_url": true,
+    "google_map_link": true,
+    "rating": true,
+    "reviews": true,
+    "event_image_url": true,
+    "ticket_link": true,
+    "more_info_link": true,
+    "description": true
+  }
+]

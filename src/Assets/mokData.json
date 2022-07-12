@@ -1,0 +1,450 @@
+{
+  "search_metadata": {
+    "id": "62c972b236e6a94ea8fde2e7",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/b3d6f432e91ee6a1/62c972b236e6a94ea8fde2e7.json",
+    "created_at": "2022-07-09 12:21:06 UTC",
+    "processed_at": "2022-07-09 12:21:06 UTC",
+    "google_events_url": "https://www.google.com/search?q=Events+in+Austin&ibp=htl;events&hl=en",
+    "raw_html_file": "https://serpapi.com/searches/b3d6f432e91ee6a1/62c972b236e6a94ea8fde2e7.html",
+    "total_time_taken": 0.88
+  },
+  "search_parameters": {
+    "q": "Events in Austin",
+    "engine": "google_events"
+  },
+  "search_information": {
+    "events_results_state": "Results for exact spelling"
+  },
+  "events_results": [
+    {
+      "title": "Jaripeo Baile “Plaza R3”",
+      "date": {
+        "start_date": "Jul 9",
+        "when": "Sat, Jul 9, 4 – 11 PM CDT"
+      },
+      "address": ["Austin", "Austin, TX"],
+      "link": "https://allevents.in/austin/jaripeo",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=fY75kKEvD6n6m-ndJH_yOMawXgEXc3-5irWzg_mG8_hMN1-TBHZAow43qLNVcKHBZ1U6ZoLnGg",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x8644b599a0cc032f:0x5d9b464bd469d57a?sa=X&hl=en",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x8644b599a0cc032f%3A0x5d9b464bd469d57a&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Austin&type=place"
+      },
+      "description": "Explore all upcoming jaripeo events in Austin, find information & tickets for upcoming jaripeo events happening in Austin.",
+      "ticket_info": [
+        {
+          "source": "AllEvents.in",
+          "link": "https://allevents.in/austin/jaripeo",
+          "link_type": "more info"
+        }
+      ],
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjVhQgrn_LbAHEx2L9CsmsRtUMfrqpSS230D4Jl-LeJk_n-ZT2nrAHmESfWg&s=10"
+    },
+    {
+      "title": "High Tonight Show Season Premiere Festival",
+      "date": {
+        "start_date": "Jul 9",
+        "when": "Today, 3:30 – 6:00 PM"
+      },
+      "address": ["The Electric Church, 5018 E Cesar Chavez St", "Austin, TX"],
+      "link": "https://www.eventbrite.com/e/high-tonight-show-season-4-premiere-tickets-376569067217?aff=ebdssbdestsearch",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=GA2zYAqr3FirdQoRPT_-akW1ppkbu0o9ilCSlHmOxjJxJQZFcMO9Xo6ZfSrayfHrejMZGF-xZ-nCtoa3YQO5-kO2L8ktvT9l375jebBqCLVsgnA1Y2c",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x8644b42a69357df7:0x2d6762a349719224?sa=X&hl=en",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x8644b42a69357df7%3A0x2d6762a349719224&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Austin&type=place"
+      },
+      "description": "Join us for The High Tonight Show Season 4 premiere live July 9th at 4:20pm. Free preroll with every ticket purchase.",
+      "ticket_info": [
+        {
+          "source": "Eventbrite.com",
+          "link": "https://www.eventbrite.com/e/high-tonight-show-season-premiere-festival-tickets-376569067217",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Allevents.in",
+          "link": "https://allevents.in/austin/high-tonight-show-season-premiere-festival/10000376569067217",
+          "link_type": "tickets"
+        }
+      ],
+      "venue": {
+        "name": "The Electric Church",
+        "rating": 4.5,
+        "reviews": 182,
+        "link": "https://www.google.com/search?ucbcb=1&hl=en&q=The+Electric+Church&ludocid=3271692107759325732&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToC2AjMBmuhi4hEwDgk1WDJCGfXcFKo9LiXyNcl-rhxw&s"
+    },
+    {
+      "title": "Three Days Grace",
+      "date": {
+        "start_date": "Aug 11",
+        "when": "Thu, 6 – 9 PM"
+      },
+      "address": ["Stubb's Bar-B-Q, 801 Red River St", "Austin, TX"],
+      "link": "https://www.austintexas.org/event/three-days-grace-explosions-tour/367658/",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=p63A08NdOmtVjMx55TtBZVmWxHnAusvJ8eOIFEmR4t5_xM4QEB57QqQE6aSyuUm9Waoy7yHkX1KnMM4tROWEB3dDsYd3qecHTN4R1zvO4ELkFDJnmbI",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x8644b5a427aa5c49:0x8bf465f43c0f1f77?sa=X&hl=en",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x8644b5a427aa5c49%3A0x8bf465f43c0f1f77&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Austin&type=place"
+      },
+      "description": "Canadian metal troops Three Days Grace will perform live at Stubb's Waller Creek Amphitheater on Thu, Aug 11 at 6:00pm.",
+      "ticket_info": [
+        {
+          "source": "Songkick.com",
+          "link": "https://www.songkick.com/concerts/40344339-three-days-grace-at-stubbs-waller-creek-amphitheater?utm_medium=organic&utm_source=microformat",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Bandsintown.com",
+          "link": "https://www.bandsintown.com/t/103355716?came_from=209",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Visit Austin",
+          "link": "https://www.austintexas.org/event/three-days-grace-explosions-tour/367658/",
+          "link_type": "more info"
+        },
+        {
+          "source": "KXAN",
+          "link": "https://www.kxan.com/calendar/?_escaped_fragment_=/show/?start=2022-05-16#!/details/Three-Days-Grace-w-Wage-War/10214036/2022-08-11T18",
+          "link_type": "more info"
+        },
+        {
+          "source": "6th Street Austin",
+          "link": "https://6street.com/events/three-days-grace-at-stubbs/",
+          "link_type": "more info"
+        }
+      ],
+      "venue": {
+        "name": "Stubb's Bar-B-Q",
+        "rating": 4.3,
+        "reviews": 5169,
+        "link": "https://www.google.com/search?ucbcb=1&hl=en&q=Stubb%27s+Bar-B-Q&ludocid=10084797565243432823&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaGNLMZ0EgGkh73gMhvkq42dsoUPWWkfY8PqduFv5TSw&s=10"
+    },
+    {
+      "title": "Calum Scott",
+      "date": {
+        "start_date": "Aug 14",
+        "when": "Sun, 6:30 – 9:30 PM"
+      },
+      "address": ["Historic Scoot Inn, 1308 E 4th St", "Austin, TX"],
+      "link": "https://www.kxan.com/calendar/?_escaped_fragment_=/show/?ser=Mohawk#!/details/Calum-Scott/10319693/2022-08-14T18",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=TiLsnQ6O1HBhw_g5TQOGtudij7MPV_srKCSaCox-kZjeONcEPw0eHijDuscMa3-PgavzLVGU5bfBsZisXd3mcrhSD8XwDaMM57d5JIKflS295DdDWdI",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x8644b5b1b5612a0d:0x2bd9a4f5c409b224?sa=X&hl=en",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x8644b5b1b5612a0d%3A0x2bd9a4f5c409b224&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Austin&type=place"
+      },
+      "description": "Check out Calum Scott at Historic Scoot Inn in Austin on August 14, 2022 and get detailed info for the event - tickets, photos, video and reviews.",
+      "ticket_info": [
+        {
+          "source": "Vividseats.com",
+          "link": "https://www.vividseats.com/calum-scott-tickets-austin-scoot-inn-8-14-2022--concerts-pop/production/3929978?utm_medium=organic&utm_source=google_eventsearch",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Festivaly.eu",
+          "link": "https://festivaly.eu/en/calum-scott-scoot-inn-austin-2022",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Scootinnaustin.com",
+          "link": "http://scootinnaustin.com/?utm_source=jambase",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Ticketsmarter.com",
+          "link": "https://www.ticketsmarter.com/5112956/calum-scott",
+          "link_type": "tickets"
+        },
+        {
+          "source": "KXAN",
+          "link": "https://www.kxan.com/calendar/?_escaped_fragment_=/show/?ser=Mohawk#!/details/Calum-Scott/10319693/2022-08-14T18",
+          "link_type": "more info"
+        }
+      ],
+      "venue": {
+        "name": "Historic Scoot Inn",
+        "rating": 4.6,
+        "reviews": 766,
+        "link": "https://www.google.com/search?ucbcb=1&hl=en&q=Historic+Scoot+Inn&ludocid=3159737989040026148&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq4qyl9QP_O-1ivXfHcKtbn6IHBqkArp5RpzkUNo0g5gM0eBk6h4rdt65PKQ&s=10"
+    },
+    {
+      "title": "CUCO 2022 SUMMER TOUR",
+      "date": {
+        "start_date": "Aug 30",
+        "when": "Tuesday"
+      },
+      "address": ["ACL Live, 310 W Willie Nelson Blvd", "Austin, TX"],
+      "link": "https://acl-live.com/calendar/cuco-0830",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=Jakuxgic4ohX49jvbUlQPiA0qc4lGedm-_SJ4qSdfoRkaAv83xhZWoEukMS-GPAxniJIwZTZao7xRTbMFQhcrZ2Aqlomx3KIcoY7-mK1kaUggUH3LlI",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x8644b50f4ba81beb:0x491ca08c71e16697?sa=X&hl=en",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x8644b50f4ba81beb%3A0x491ca08c71e16697&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Austin&type=place"
+      },
+      "description": "Sometimes the safest world to reside in–hide in–is the one you create yourself. For his second full-length studio album, Fantasy Gateway, Cuco did just that. The time between Para Mí and now...",
+      "ticket_info": [
+        {
+          "source": "Bandsintown.com",
+          "link": "https://www.bandsintown.com/t/103405719?came_from=209",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Festivaly.eu",
+          "link": "https://festivaly.eu/en/cuco-austin-city-limits-live-at-the-moody-theater-austin-2022",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Allevents.in",
+          "link": "https://allevents.in/austin/cuco/210001596778295",
+          "link_type": "tickets"
+        },
+        {
+          "source": "ACL Live",
+          "link": "https://acl-live.com/calendar/cuco-0830",
+          "link_type": "more info"
+        },
+        {
+          "source": "KXAN",
+          "link": "https://www.kxan.com/calendar/?_escaped_fragment_=/show/?start=2022-05-16#!/details/Cuco/10271844/2022-08-30T18",
+          "link_type": "more info"
+        }
+      ],
+      "venue": {
+        "name": "ACL Live",
+        "rating": 4.7,
+        "reviews": 2911,
+        "link": "https://www.google.com/search?ucbcb=1&hl=en&q=ACL+Live&ludocid=5268262189183100567&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4V7vg8Tjdqc0tW91K_shlNbvMyT9Pe_0wP62q-a3X7A&s=10"
+    },
+    {
+      "title": "Seismic Dance Event",
+      "date": {
+        "start_date": "Nov 11",
+        "when": "Fri, Nov 11 – Sun, Nov 13"
+      },
+      "address": ["The Concourse Project, 8509 Burleson Rd", "Austin, TX"],
+      "link": "https://www.facebook.com/events/the-concourse-project/seismic-dance-event-50/1384674148601467/",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=tE5YNtsmmZgonT8MpBjhnAM2aisnQqPAgdHbxW3ttowwR158SWpkBCJrxOQIVcQ2xhTbGvWJAw422-QdsVUeN1mRJprFy6TiLq81-L4kdJ6_yajRkhw",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x8644b1316e46d40b:0x8c69c5b81db8e737?sa=X&hl=en",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x8644b1316e46d40b%3A0x8c69c5b81db8e737&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Austin&type=place"
+      },
+      "description": "Seismic Dance Event www.seismicdanceevent.com Nov 11, 12, 13 2022 at The Concourse Project Artists in ABC Order: Acraze Anklepants Camelphat Cassian Charlotte De Witte Chloé Calleit CID Colyn...",
+      "ticket_info": [
+        {
+          "source": "Songkick.com",
+          "link": "https://www.songkick.com/festivals/2511344-seismic-dance-event/id/40451035-seismic-dance-event-2022?utm_medium=organic&utm_source=microformat",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Bandsintown.com",
+          "link": "https://www.bandsintown.com/f/101577-seismic-dance-event-2022?came_from=209",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Vividseats.com",
+          "link": "https://www.vividseats.com/seismic-dance-event-tickets-austin-the-concourse-project-11-11-2022--concerts-danceelectronica/production/3812551?utm_medium=organic&utm_source=google_eventsearch",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Seetickets.us",
+          "link": "https://www.seetickets.us/event/Seismic-Dance-Event-50/455873",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Facebook",
+          "link": "https://www.facebook.com/events/1384674148601467",
+          "link_type": "more info"
+        }
+      ],
+      "venue": {
+        "name": "The Concourse Project",
+        "rating": 4.1,
+        "reviews": 268,
+        "link": "https://www.google.com/search?ucbcb=1&hl=en&q=The+Concourse+Project&ludocid=10117835432427841335&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1jxOWtAFl1JmFTShUyIh3Hx2SLnDx12WtmC-MreHvPFVHO7wnS2Iaz95aew&s=10"
+    },
+    {
+      "title": "Kenny Wayne Shepherd",
+      "date": {
+        "start_date": "Jul 16",
+        "when": "Saturday"
+      },
+      "address": ["ACL Live, 310 W Willie Nelson Blvd", "Austin, TX"],
+      "link": "https://acl-live.com/calendar/kenny-wayne-shepherd-0716",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=Jakuxgic4ohX49jvbUlQPiA0qc4lGedm-_SJ4qSdfoRkaAv83xhZWoEukMS-GPAxniJIwZTZao7xRTbMFQhcrZ2Aqlomx3KIcoY7-mK1kaUggUH3LlI",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x8644b50f4ba81beb:0x491ca08c71e16697?sa=X&hl=en",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x8644b50f4ba81beb%3A0x491ca08c71e16697&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Austin&type=place"
+      },
+      "description": "Celebrating the 25th Anniversary of Trouble Is…, performing the landmark album in its entirety. There are few artists whose names are synonymous with one instrument and how it's played in service...",
+      "ticket_info": [
+        {
+          "source": "Redzonetickets.com",
+          "link": "https://www.redzonetickets.com/5107205/Bidi-Bidi-Banda-Selena-Quintanilla-Tribute",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Tixel.com",
+          "link": "https://tixel.com/music-tickets/2022/07/16/kenny-wayne-shepherd",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Festivaly.eu",
+          "link": "https://festivaly.eu/en/kenny-wayne-shepherd-austin-city-limits-live-at-the-moody-theater-austin-2022",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Allevents.in",
+          "link": "https://allevents.in/austin/kenny-wayne-shepherd/210001078882127",
+          "link_type": "tickets"
+        },
+        {
+          "source": "ACL Live",
+          "link": "https://acl-live.com/calendar/kenny-wayne-shepherd-0716",
+          "link_type": "more info"
+        }
+      ],
+      "venue": {
+        "name": "ACL Live",
+        "rating": 4.7,
+        "reviews": 2911,
+        "link": "https://www.google.com/search?ucbcb=1&hl=en&q=ACL+Live&ludocid=5268262189183100567&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWsE5b155CvMYrOjkDb-2AtFWIu0NuqRMGPlf2fE26wg&s"
+    },
+    {
+      "title": "Austin Bat Fest",
+      "date": {
+        "start_date": "Aug 27",
+        "when": "Sat, 4:00 – 11:59 PM"
+      },
+      "address": ["Congress Avenue Bridge, Congress Ave.", "Austin, TX"],
+      "link": "https://www.austintexas.org/event/austin-bat-fest/367810/",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=YM02s91wz83fx-pqFf4NqG4vZxm_UnA5-iBpJaAMizQFUByufL3Hu-mTVdnU9cWGj6eMUp9pXofbcDOlE8BSq1uJVnp9t0S7T37JFpcj_3ceQKChUYI",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x8644b5064fff0741:0xc70811548b9aecff?sa=X&hl=en",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x8644b5064fff0741%3A0xc70811548b9aecff&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Austin&type=place"
+      },
+      "description": "Cost: Admission $25 in advance, $25 cash at the gate including all service charges and fees. Kids 8 and under free with an adult. Tickets to 2022 Bat Fest. VIP Tickets: Price $250 Want to be in...",
+      "ticket_info": [
+        {
+          "source": "Fgtix.com",
+          "link": "https://on.fgtix.com/trk/YBzL",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Visit Austin",
+          "link": "https://www.austintexas.org/event/austin-bat-fest/367810/",
+          "link_type": "more info"
+        },
+        {
+          "source": "Ticketmaster",
+          "link": "https://www.ticketmaster.com/congress-avenue-bridge-tickets-austin/venue/476222",
+          "link_type": "more info"
+        },
+        {
+          "source": "KXAN",
+          "link": "https://www.kxan.com/calendar/?_escaped_fragment_=/show/?ser=Mohawk#!/details/Bat-Fest/9910653/2022-08-27T16",
+          "link_type": "more info"
+        },
+        {
+          "source": "Fetty Wap",
+          "link": "http://fettywap.com/tour/",
+          "link_type": "more info"
+        }
+      ],
+      "venue": {
+        "name": "Congress Avenue Bridge",
+        "rating": 4.5,
+        "reviews": 3138,
+        "link": "https://www.google.com/search?ucbcb=1&hl=en&q=Congress+Avenue+Bridge&ludocid=14341732068178455807&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNiobYx5G6hB9MQTs0MwHNcQDclOm2aUSiJtSCa_inbg&s=10"
+    },
+    {
+      "title": "The Line Hotel - Pool Side Sessions",
+      "date": {
+        "start_date": "Jul 9",
+        "when": "Today, 1 – 5 PM"
+      },
+      "address": ["The LINE Austin, 111 E Cesar Chavez St", "Austin, TX"],
+      "link": "https://ra.co/events/1535595",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=vsXNaFpajr2AMAprQOGLQXnTBwSBPIFVEqkMmd42iTQYdXl8NJk30YYKE9tSSXvlEXmduOxKZcuM132TuX9YXDTwJD8dpfQMOI3DdFo0WheL7RnxMY4",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x8644b5f16bf04303:0xd99fe123ed3d5847?sa=X&hl=en",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x8644b5f16bf04303%3A0xd99fe123ed3d5847&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Austin&type=place"
+      },
+      "description": "Pool Side House Music Sessions Free for Guests of the hotel.",
+      "ticket_info": [
+        {
+          "source": "Resident Advisor",
+          "link": "https://ra.co/events/1535595",
+          "link_type": "more info"
+        }
+      ],
+      "venue": {
+        "name": "The LINE Austin",
+        "rating": 4.2,
+        "reviews": 1009,
+        "link": "https://www.google.com/search?ucbcb=1&hl=en&q=The+LINE+Austin&ludocid=15681499971947681863&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWYGjqQzLGRI600dMRIGOvoG5rOBHSWwNFiB2fkohPLiJYx9jM9Fd0ZWiHWw&s=10"
+    },
+    {
+      "title": "Lewis Black: Off the Rails",
+      "date": {
+        "start_date": "Nov 3",
+        "when": "Thursday"
+      },
+      "address": ["ACL Live, 310 W Willie Nelson Blvd", "Austin, TX"],
+      "link": "https://acl-live.com/calendar/lewis-black-1103",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=Jakuxgic4ohX49jvbUlQPiA0qc4lGedm-_SJ4qSdfoRkaAv83xhZWoEukMS-GPAxniJIwZTZao7xRTbMFQhcrZ2Aqlomx3KIcoY7-mK1kaUggUH3LlI",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x8644b50f4ba81beb:0x491ca08c71e16697?sa=X&hl=en",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x8644b50f4ba81beb%3A0x491ca08c71e16697&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Austin&type=place"
+      },
+      "description": "Known as the King of Rant, Lewis Black uses his trademark style of comedic yelling and finger pointing to expose the absurdities of life. His comedic brilliance makes people laugh at life's...",
+      "ticket_info": [
+        {
+          "source": "Tixel.com",
+          "link": "https://tixel.com/comedy-tickets/2022/11/03/lewis-black-off-the-rails",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Allevents.in",
+          "link": "https://allevents.in/austin/lewis-black-off-the-rails/210001912528168",
+          "link_type": "tickets"
+        },
+        {
+          "source": "ACL Live",
+          "link": "https://acl-live.com/calendar/lewis-black-1103",
+          "link_type": "more info"
+        },
+        {
+          "source": "Visit Austin",
+          "link": "https://www.austintexas.org/event/lewis-black%3A-off-the-rails-tour/367189/",
+          "link_type": "more info"
+        },
+        {
+          "source": "Live Nation",
+          "link": "https://www.livenation.com/event/G5dIZ96duhg-s/lewis-black-off-the-rails",
+          "link_type": "more info"
+        }
+      ],
+      "venue": {
+        "name": "ACL Live",
+        "rating": 4.7,
+        "reviews": 2911,
+        "link": "https://www.google.com/search?ucbcb=1&hl=en&q=ACL+Live&ludocid=5268262189183100567&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSghpIca4i-EEmrkSJnx8RuEnJWcoaumVLrPqZgq3i_ig&s"
+    }
+  ]
+}
