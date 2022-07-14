@@ -223,6 +223,10 @@ input[type="submit"]:hover {
   width: 600px;
   text-align: center;
 }
+.searchbar {
+  text-align: center;
+  place-items: center;
+}
 
 /* The profile image */
 .profileImage {
