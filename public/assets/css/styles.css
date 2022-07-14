@@ -218,35 +218,65 @@ input[type="submit"]:hover {
 
 /* The friends page title */
 .heading {
-  margin-left: auto;
-  margin-right: auto;
   width: 600px;
   text-align: center;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  color: white;
+  padding-bottom: 20px;
 }
-.searchbar {
-  text-align: center;
-  place-items: center;
+.search-friends-container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.search-users-box {
+  background: rgba(255, 255, 255, 0.4);
+  width: 100%;
+  border-radius: 60px;
+  padding: 5px 5px;
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
 }
 
-/* The profile image */
-.profileImage {
+.search-users-box input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 30px;
+  color: #c75afb;
+}
+.search-users-box button img {
+  width: 25px;
+}
+
+.search-users-box button {
+  border: 0;
   border-radius: 50%;
-  width: 250px;
-  height: 250px;
-  display: block;
-  position: relative;
-  margin-top: 10px;
-  transition: 200ms transform ease-in-out;
-}
-
-.profileImage:hover {
-  transform: scale(1.025);
+  width: 60px;
+  height: 60px;
+  background: #895cf8;
+  cursor: pointer;
 }
 
 /* The friends cards */
 .friendsTable {
   display: grid;
   place-items: center;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.4);
+  top: 55%;
+  left: 40%;
 }
 .card {
   display: inline-grid;
@@ -254,6 +284,26 @@ input[type="submit"]:hover {
   grid-gap: 3px;
   justify-items: center;
   align-items: center;
+  width: 200px;
+  height: 200px;
+}
+
+/* side bar with friend requests */
+.side-bar {
+  background: rgba(300, 300, 300, 0.4);
+  top: 50%;
+  position: absolute;
+  margin-left: 5px;
+  height: 600px;
+  width: 300px;
+  text-align: center;
+}
+.request-card {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background: white;
 }
 
 /* media query */

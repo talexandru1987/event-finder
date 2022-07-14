@@ -70,24 +70,29 @@
 
     <!-- Home Page Image and Title -->
     <div class="home-container">
-      <img src="" class="home-image" alt="" />
+      <img
+        src="./assets/images/home-page-images/volleyball.jpg"
+        class="home-image"
+        alt=""
+      />
     </div>
     <!-- title -->
     <div class="heading"><h1>Invite Your Friends</h1></div>
-    <!-- User profile image -->
-    <div>
-      <img
-        src="./assets/images/friends-page-image/example user image.avif"
-        alt="User profile image"
-        class="profileImage"
-      />
-    </div>
 
     <!-- Searchbar for friends -->
-    <div class="searchbar">
-      <input type="Add Friends" placeholder="Enter UserName" /><button>Find</button>
+    <div class="search-friends-container">
+      <form
+        action="https://www.google.com/search"
+        method="get"
+        class="search-users-box"
+      >
+        <input type="text" placeholder="Enter UserName" name="q" />
+        <button type="submit">
+          <img src="./assets/images/home-page-images/search.png" />
+        </button>
+      </form>
     </div>
-<!-- Users friends cards -->
+    <!-- Users friends cards -->
     <div class="friendsTable">
       <div class="card">
         <img class="card-img-top" src="..." alt="userProfileImage" />
@@ -98,31 +103,28 @@
           <h6>Request Status</h6>
         </div>
       </div>
-      
-      </div>
     </div>
 
     <!-- side bar with pending invites  -->
 
     <!-- The sidebar -->
     <aside class="side-bar">
-      <div><h2>Your Invites</h2></div>
-      <div class="card">
-        <img class="card-img-aside" src="..." alt="userProfileImage" />
+      <div><h2>Your friend requests</h2></div>
+      <!-- Individual friend requests -->
+      <div class="request-card">
+        <img
+          class="card-img-aside"
+          src="./assets/images/friends-page-image/example user image.avif"
+          alt="userProfileImage"
+        />
         <div class="card-body">
           <h5 class="card-title">UserName</h5>
-          <h6>Event Name</h6>
-          <p>Event description</p>
+
           <a href="#" class="btn btn-primary">Accept</a>
           <a href="#" class="btn btn-primary">Decline</a>
-          
         </div>
       </div>
     </aside>
-
-    <!-- Users friends cards -->
-
-    
 
     <script src="./assets/js/friends.js" async defer></script>
     <script
