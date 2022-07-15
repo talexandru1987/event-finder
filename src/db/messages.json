@@ -1,12 +1,14 @@
 [
   {
-    "user_id": "Bob",
-    "friends_id": "Smith",
-    "events_id": "Bsmith"
+    "user_id": "1",
+    "friends_id": "1",
+    "events_id": "1",
+    "text": "some text message "
   },
   {
-    "user_id": "Bob",
-    "friends_id": "Smith",
-    "events_id": "Bsmith"
+    "user_id": "3",
+    "friends_id": "3",
+    "events_id": "3",
+    "text": "some other text message "
   }
 ]
