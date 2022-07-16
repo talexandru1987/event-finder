@@ -1,0 +1,40 @@
+{{> publicNavBar}}
+
+    <div class="home-container">
+      <img
+        src="./assets/images/home-page-images/concert-purple.jpg"
+        class="home-image"
+        alt="crowd at a concert"
+      />
+    </div>
+
+    <!-- Sign Up -->
+    <div class="login-center">
+      <h1>Sign Up to What's On!</h1>
+      <form method="post">
+        <!-- first name -->
+        <div class="text-field">
+          <input type="text" required />
+          <label>First Name</label>
+        </div>
+        <!-- last name -->
+        <div class="text-field">
+          <input type="text" required />
+          <label>Last Name</label>
+        </div>
+        <!-- email -->
+        <div class="text-field">
+          <input type="text" required />
+          <label>Email</label>
+        </div>
+        <!-- password -->
+        <div class="text-field">
+          <input type="password" required />
+          <label>Password</label>
+        </div>
+        <input type="submit" value="Sign Up" />
+        <div class="signup-link">
+          Already a member? <a href="/login">Login</a>
+        </div>
+      </form>
+    </div>
