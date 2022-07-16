@@ -3,16 +3,24 @@ const { User } = require("../../models");
 const login = async (req, res) => {
   try {
     const { email, password } = req.body;
+
     const user = await User.findOne({ where: { email } });
+
     if (!user) {
       console.log(
         `[ERROR]: Failed to login | No user found with email: ${email}`
       );
       return res.status(500).json({ success: false });
     }
+
     const isAuthorised = await user.checkPassword(password);
+
     if (isAuthorised) {
-      return res.json({ success: true });
+      req.session.save(() => {
+        req.session.isLoggedIn = true;
+        req.session.user = user.getUser();
+        return res.json({ success: true });
+      });
     } else {
       console.log(
         `[ERROR]: Failed to login | Incorrect password for email: ${email}`
@@ -28,14 +36,17 @@ const login = async (req, res) => {
 };
 
 const signup = async (req, res) => {
-  //this controller function will receive a payload
-  //create a user
-  //send a response to say successfully created user
-
   try {
-    ///get user data from payload
-    const { first_name, last_name, email, password } = req.body;
-    //check user exists
+    const {
+      first_name,
+      last_name,
+      user_name,
+      password,
+      email,
+      profile_img_url,
+      date_of_birth,
+    } = req.body;
+
     const user = await User.findOne({ where: { email } });
 
     if (user) {
@@ -45,8 +56,7 @@ const signup = async (req, res) => {
       return res.status(500).json({ success: false });
     }
 
-    //create user
-    const data = await User.create({
+    await User.create({
       first_name,
       last_name,
       user_name,
@@ -56,14 +66,22 @@ const signup = async (req, res) => {
       date_of_birth,
     });
 
-    return res.json({ data: "Successfully created user" });
+    return res.json({ success: true });
   } catch (error) {
     console.log(`[ERROR]: Failed to create user | ${error.message}`);
     return res.status(500).json({ success: false });
   }
 };
 
-const logout = async (req, res) => {};
+const logout = async (req, res) => {
+  if (req.session.isLoggedIn) {
+    req.session.destroy(() => {
+      return res.status(204).end();
+    });
+  } else {
+    return res.status(404).end();
+  }
+};
 
 module.exports = {
   login,

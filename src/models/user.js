@@ -2,7 +2,24 @@ const { Model, DataTypes } = require("sequelize");
 
 const connection = require("../config/connection");
 
-class User extends Model {}
+class User extends Model {
+  getUser() {
+    return {
+      id: this.id,
+      firstName: this.first_name,
+      lastName: this.last_name,
+      userName: this.user_name,
+      email: this.email,
+      profileImgUrl: this.profile_img_url,
+      dateOfBirth: this.date_of_birth,
+    };
+  }
+
+  async checkPassword(password) {
+    const isValid = await bcrypt.compare(password, this.password);
+    return isValid;
+  }
+}
 
 const schema = {
   id: {
@@ -51,11 +68,11 @@ const schema = {
 
   profile_img_url: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
     validate: {
       isUrl: true,
     },
-    default:
+    defaultValue:
       "https://media.istockphoto.com/vectors/user-icon-flat-isolated-on-white-background-user-symbol-vector-vector-id1300845620?s=612x612",
   },
 
