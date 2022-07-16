@@ -34,7 +34,7 @@ const signup = async (req, res) => {
 
   try {
     ///get user data from payload
-    const { firstName, lastName, email, password } = req.body;
+    const { first_name, last_name, email, password } = req.body;
     //check user exists
     const user = await User.findOne({ where: { email } });
 
@@ -47,10 +47,13 @@ const signup = async (req, res) => {
 
     //create user
     const data = await User.create({
-      firstName,
-      lastName,
+      first_name,
+      last_name,
+      user_name,
       email,
       password,
+      profile_img_url,
+      date_of_birth,
     });
 
     return res.json({ data: "Successfully created user" });
