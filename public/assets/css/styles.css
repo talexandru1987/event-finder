@@ -108,10 +108,10 @@ body {
 /* login page css */
 .login-center {
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
+  width: 500px;
   background: rgba(255, 255, 255, 0.768);
   border-radius: 10px;
   backdrop-filter: blur(4px);
@@ -338,9 +338,15 @@ input[type="submit"]:hover {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center;
+<<<<<<< HEAD
   /* images that only show on mobile viewports */
 }
 
+=======
+}
+
+/* images that only show on mobile viewports */
+>>>>>>> 17073c9316353e80d9d7e2dc38d6808bc3f65392
 .mobile-image {
   display: none;
 }
