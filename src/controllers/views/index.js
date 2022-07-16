@@ -1,8 +1,9 @@
-const path = require("path");
+const axios = require("axios");
+
+const GOOGLE_EVENTS_URL = "https://serpapi.com/search.json";
 
 const renderHomePage = (req, res) => {
-  const filePath = path.join(__dirname, "../../../public/index.html");
-  return res.sendFile(filePath);
+  return res.render("home");
 };
 
 const renderLoginPage = (req, res) => {
@@ -13,7 +14,27 @@ const renderSignUpPage = (req, res) => {
   return res.render("signup");
 };
 
-const renderSearchEventsPage = (req, res) => {
+const renderSearchEventsPage = async (req, res) => {
+  const { q } = req.query;
+
+  const options = {
+    params: {
+      q: encodeURI(q),
+      engine: "google_events",
+
+      api_key: process.env.GOOGLE_API_KEY,
+    },
+  };
+
+  const { data } = await axios.get(GOOGLE_EVENTS_URL, options);
+
+  console.log(data.events_results);
+  const events = data.events_results;
+
+  const eventCards = data.events_results.map((event) => {
+    return ``;
+  });
+
   return res.render("searchEvents");
 };
 

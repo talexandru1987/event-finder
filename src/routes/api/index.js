@@ -1,9 +1,9 @@
 const { Router } = require("express");
 
-const { renderEventsPage } = require("../../controllers/api");
+const { searchEvents } = require("../../controllers/api");
 
 const router = Router();
 
-router.get("/events", renderEventsPage);
+router.get("/search-events", searchEvents);
 
 module.exports = router;

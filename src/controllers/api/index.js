@@ -1,11 +1,6 @@
 const path = require("path");
 
-const renderEventsPage = (req, res) => {
-  //code for rendering the vents page
-  console.log("render the events in the selected city");
-  const filePath = path.join(__dirname, "../../../public/index.html");
-  return res.sendFile(filePath);
-};
+const searchEvents = (req, res) => {};
 
 const renderSearchEvents = (req, res) => {
   //code for rendering the vents page
@@ -18,5 +13,5 @@ const renderLoginPage = (req, res) => {
 };
 
 module.exports = {
-  renderEventsPage,
+  searchEvents,
 };
