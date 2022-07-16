@@ -6,13 +6,11 @@ const renderHomePage = (req, res) => {
 };
 
 const renderLoginPage = (req, res) => {
-  const filePath = path.join(__dirname, "../../../public/login.html");
-  return res.sendFile(filePath);
+  return res.render("login");
 };
 
 const renderSignUpPage = (req, res) => {
-  const filePath = path.join(__dirname, "../../../public/signup.html");
-  return res.sendFile(filePath);
+  return res.render("signup");
 };
 
 module.exports = {
