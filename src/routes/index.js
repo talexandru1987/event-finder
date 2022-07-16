@@ -1,9 +1,8 @@
 const { Router } = require("express");
+const views = require("./views");
 
 const router = Router();
 
-router.get("/", async (req, res) => {
-  res.render("all");
-});
+router.use("/", views);
 
 module.exports = router;
