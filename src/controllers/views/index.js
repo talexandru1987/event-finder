@@ -28,14 +28,11 @@ const renderSearchEventsPage = async (req, res) => {
 
   const { data } = await axios.get(GOOGLE_EVENTS_URL, options);
 
-  console.log(data.events_results);
-  const events = data.events_results;
-
-  const eventCards = data.events_results.map((event) => {
-    return ``;
+  const events = data.events_results.map((event) => {
+    return { ...event, address: event.address.join(" ") };
   });
 
-  return res.render("searchEvents");
+  return res.render("searchEvents", { events });
 };
 
 module.exports = {
