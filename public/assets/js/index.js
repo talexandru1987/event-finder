@@ -12,6 +12,8 @@ const renderError = (id, message) => {
 const handleSignup = async (event) => {
   event.preventDefault();
 
+  //NEED TO ADD IDS TO FORM FIELDS
+
   const firstName = $("#firstName").val;
   const userName = $("#userName").val;
   const email = $("#email").val;
@@ -87,7 +89,8 @@ const handleLogin = async (event) => {
       const data = await response.json();
 
       if (data.success) {
-        window.location.assign("/dashboard");
+        //LOGIN - WHERE DOES IT REDIRECT TO??? SAVED EVENTS? FRIENDS PAGE?
+        window.location.assign("");
       } else {
         renderError("login-error", "Failed to login. Please try again");
       }
