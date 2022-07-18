@@ -1,6 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
 
+const bcrypt = require("bcrypt");
+
 const connection = require("../config/connection");
+const { hashPassword } = require("../hooks");
 
 class User extends Model {
   getUser() {
@@ -90,6 +93,9 @@ const options = {
   timestamps: true,
   freezeTableName: true,
   modelName: "user",
+  hooks: {
+    beforeCreate: hashPassword,
+  },
 };
 
 User.init(schema, options);

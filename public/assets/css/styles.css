@@ -338,6 +338,7 @@ input[type="submit"]:hover {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center;
+  /* images that only show on mobile viewports */
 }
 
 /* images that only show on mobile viewports */
