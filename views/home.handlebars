@@ -1,4 +1,8 @@
-{{> privateNavBar }}
+{{#if isLoggedIn }}
+  {{> privateNavBar }}
+{{else}}
+  {{> publicNavBar }}
+{{/if}}
 
 <!-- Home Page Image and Title -->
 <div class="flex-container">
