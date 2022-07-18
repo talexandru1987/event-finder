@@ -1,5 +1,3 @@
-//NEED TO ADD IDS TO HANDLEBAR FILES
-
 const signupForm = $("#signup-form");
 const loginForm = $("#login-form");
 
@@ -11,8 +9,6 @@ const renderError = (id, message) => {
 
 const handleSignup = async (event) => {
   event.preventDefault();
-
-  //NEED TO ADD IDS TO FORM FIELDS
 
   const firstName = $("#firstName").val;
   const userName = $("#userName").val;
