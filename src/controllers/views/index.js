@@ -4,7 +4,7 @@ const { getAttributes } = require("../../models/user");
 const GOOGLE_EVENTS_URL = "https://serpapi.com/search.json";
 
 const renderHomePage = (req, res) => {
-  return res.render("home");
+  return res.render("home", { isLoggedIn: req.session.isLoggedIn });
 };
 
 const renderLoginPage = (req, res) => {

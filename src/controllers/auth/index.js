@@ -7,9 +7,7 @@ const login = async (req, res) => {
     const user = await User.findOne({ where: { email } });
 
     if (!user) {
-      console.log(
-        `[ERROR]: Failed to login | No user found with email: ${email}`
-      );
+      console.log(`[ERROR]: Failed to login | No user found with email: ${email}`);
       return res.status(500).json({ success: false });
     }
 
@@ -22,9 +20,7 @@ const login = async (req, res) => {
         return res.json({ success: true });
       });
     } else {
-      console.log(
-        `[ERROR]: Failed to login | Incorrect password for email: ${email}`
-      );
+      console.log(`[ERROR]: Failed to login | Incorrect password for email: ${email}`);
 
       return res.status(500).json({ success: false });
     }
@@ -36,23 +32,16 @@ const login = async (req, res) => {
 };
 
 const signup = async (req, res) => {
+  console.log(req.body);
   try {
-    const {
-      first_name,
-      last_name,
-      user_name,
-      password,
-      email,
-      profile_img_url,
-      date_of_birth,
-    } = req.body;
+    console.log(req.body);
+    const { first_name, last_name, user_name, password, email, profile_img_url, date_of_birth } =
+      req.body;
 
     const user = await User.findOne({ where: { email } });
 
     if (user) {
-      console.log(
-        `[ERROR]: Failed to create user | Account with email: ${email} already exists`
-      );
+      console.log(`[ERROR]: Failed to create user | Account with email: ${email} already exists`);
       return res.status(500).json({ success: false });
     }
 
