@@ -1,5 +1,5 @@
 const axios = require("axios");
-const { UserEvents, Events, User } = require("../../models");
+const { Events, User } = require("../../models");
 const { getAttributes } = require("../../models/user");
 
 const GOOGLE_EVENTS_URL = "https://serpapi.com/search.json";
@@ -34,32 +34,36 @@ const renderSearchEventsPage = async (req, res) => {
     return { ...event, address: event.address.join(" ") };
   });
 
-  return res.render("searchEvents", { events });
+  return res.render("searchEvents", {
+    events,
+    isLoggedIn: req.session.isLoggedIn,
+  });
 };
 
-const renderSaveEventsPage = async (req, res) => {
-  const userEventsFromDb = await Events.findAll({
-    include: [
-      {
-        model: User,
-        through: UserEvents,
-        where: {
-          user_id: req.session.user.id,
-        },
-      },
-    ],
-  });
-  const userEvents = userEventsFromDb.map((userEvent) => {
-    return userEvent.get({ plain: true });
-  });
-  console.log(userEvents);
+const renderMyEventsPage = async (req, res) => {
+  const { user } = req.session;
 
-  return res.render("saved-events", { currentPage: "save-events", savedCards });
+  const eventsFromDb = await Events.findAll({
+    where: {
+      user_id: user.id,
+    },
+  });
+
+  const events = eventsFromDb.map((event) => {
+    return event.get({ plain: true });
+  });
+
+  return res.render("myEvents", {
+    currentPage: "my-events",
+    events,
+    user,
+  });
 };
+
 module.exports = {
   renderHomePage,
   renderLoginPage,
   renderSignUpPage,
   renderSearchEventsPage,
-  renderSaveEventsPage,
+  renderMyEventsPage,
 };

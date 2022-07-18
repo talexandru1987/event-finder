@@ -5,7 +5,7 @@ const {
   renderLoginPage,
   renderSignUpPage,
   renderSearchEventsPage,
-  renderSaveEventsPage,
+  renderMyEventsPage,
 } = require("../../controllers/views");
 const auth = require("../../middlewares/auth");
 
@@ -15,5 +15,5 @@ router.get("/", renderHomePage);
 router.get("/login", renderLoginPage);
 router.get("/signup", renderSignUpPage);
 router.get("/search-events", renderSearchEventsPage);
-router.get("/my-events", auth, renderSaveEventsPage);
+router.get("/my-events", auth, renderMyEventsPage);
 module.exports = router;
