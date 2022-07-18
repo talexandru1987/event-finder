@@ -1,12 +1,11 @@
 //TEMPLATE CODE
 
 const connection = require("../config/connection");
-const { Events, Friends, Invites, Messages, UserEvents, User } = require("../models");
+const { Events, Friends, Invites, Messages, User } = require("../models");
 const events = require("./events.json");
 const friends = require("./friends.json");
 const invites = require("./invites.json");
 const messages = require("./messages.json");
-const userEvents = require("./user_events");
 const users = require("./user.json");
 
 const seedUsers = async () => {
@@ -25,12 +24,6 @@ const seedEvents = async () => {
   const promises = events.map((event) => Events.create(event));
   await Promise.all(promises);
   console.log("Successfully seeded events");
-};
-
-const seedUserEvents = async () => {
-  const promises = userEvents.map((userEvent) => UserEvents.create(userEvent));
-  await Promise.all(promises);
-  console.log("Successfully seeded user events");
 };
 
 const seedInvites = async () => {
@@ -58,9 +51,6 @@ const init = async () => {
 
     // seed events
     await seedEvents();
-
-    // seed user events
-    await seedUserEvents();
 
     // seed invites
     await seedInvites();

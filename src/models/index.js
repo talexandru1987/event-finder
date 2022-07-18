@@ -3,15 +3,17 @@ const Friends = require("./friends");
 const Invites = require("./invites");
 const Messages = require("./messages");
 const User = require("./user");
-const UserEvents = require("./user_events");
 
-// define associations
+// User and Events
+Events.belongsTo(User, {
+  foreignKey: "user_id",
+});
+
+User.hasMany(Events, {
+  foreignKey: "user_id",
+});
 
 User.hasMany(Friends);
-
-User.belongsToMany(Events, {
-  through: UserEvents,
-});
 
 User.hasMany(Messages);
 
@@ -27,5 +29,4 @@ module.exports = {
   Invites,
   Messages,
   User,
-  UserEvents,
 };

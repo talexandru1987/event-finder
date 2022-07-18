@@ -1,5 +1,6 @@
 [
   {
+    "user_id": 1,
     "title": "High Tonight Show Season Premiere Festival",
     "end_date": "2015-03-12T19:37:27+00:00",
     "address": "The Electric Church, 5018 E Cesar Chavez St",
@@ -16,6 +17,7 @@
     "description": "Join us for The High Tonight Show Season 4 premiere live July 9th at 4:20pm. Free preroll with every ticket purchase."
   },
   {
+    "user_id": 1,
     "title": "Three Days Grace",
     "end_date": "2016-03-12T19:37:27+00:00",
     "address": "Stubb's Bar-B-Q, 801 Red River St",
@@ -32,6 +34,7 @@
     "description": "Canadian metal troops Three Days Grace will perform live at Stubb's Waller Creek Amphitheater on Thu, Aug 11 at 6:00pm."
   },
   {
+    "user_id": 2,
     "title": "Calum Scott",
     "end_date": "2017-03-12T19:37:27+00:00",
     "address": "Historic Scoot Inn, 1308 E 4th St",
@@ -48,6 +51,7 @@
     "description": "Check out Calum Scott at Historic Scoot Inn in Austin on August 14, 2022 and get detailed info for the event - tickets, photos, video and reviews."
   },
   {
+    "user_id": 3,
     "title": "CUCO 2022 SUMMER TOUR",
     "end_date": "2017-03-12T19:37:27+00:00",
     "address": "ACL Live, 310 W Willie Nelson Blvd",

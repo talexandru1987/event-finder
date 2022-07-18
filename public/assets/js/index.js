@@ -1,6 +1,7 @@
 const signupForm = $("#signup-form");
 const loginForm = $("#login-form");
 const logoutBtn = $("#logout-btn");
+const searchForm = $("#search-form");
 
 const renderError = (id, message) => {
   const errorDiv = $(`#${id}`);
@@ -20,7 +21,14 @@ const handleSignup = async (event) => {
   const profile_img_url = $("#profileImageUrl").val();
   const date_of_birth = $("#dateOfBirth").val();
 
-  if (first_name && last_name && user_name && email && password && confirmPassword) {
+  if (
+    first_name &&
+    last_name &&
+    user_name &&
+    email &&
+    password &&
+    confirmPassword
+  ) {
     if (password === confirmPassword) {
       try {
         const payload = {
@@ -49,10 +57,16 @@ const handleSignup = async (event) => {
         if (data.success) {
           window.location.assign("/login");
         } else {
-          renderError("signup-error", "Failed to create account. Please try again");
+          renderError(
+            "signup-error",
+            "Failed to create account. Please try again"
+          );
         }
       } catch (error) {
-        renderError("signup-error", "Failed to create account. Please try again.");
+        renderError(
+          "signup-error",
+          "Failed to create account. Please try again."
+        );
       }
     } else {
       renderError("signup-error", "Passwords do not match. Try again.");
@@ -119,6 +133,15 @@ const handleLogout = async () => {
   }
 };
 
+const navigateToSearchResults = (event) => {
+  event.preventDefault();
+
+  const q = $("#searchInput").val();
+
+  window.location.assign(`/search-events?q=${q}`);
+};
+
 signupForm.submit(handleSignup);
 loginForm.submit(handleLogin);
 logoutBtn.click(handleLogout);
+searchForm.submit(navigateToSearchResults);

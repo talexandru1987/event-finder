@@ -1,4 +1,6 @@
 const axios = require("axios");
+const { Events, User } = require("../../models");
+const { getAttributes } = require("../../models/user");
 
 const GOOGLE_EVENTS_URL = "https://serpapi.com/search.json";
 
@@ -32,7 +34,30 @@ const renderSearchEventsPage = async (req, res) => {
     return { ...event, address: event.address.join(" ") };
   });
 
-  return res.render("searchEvents", { events });
+  return res.render("searchEvents", {
+    events,
+    isLoggedIn: req.session.isLoggedIn,
+  });
+};
+
+const renderMyEventsPage = async (req, res) => {
+  const { user } = req.session;
+
+  const eventsFromDb = await Events.findAll({
+    where: {
+      user_id: user.id,
+    },
+  });
+
+  const events = eventsFromDb.map((event) => {
+    return event.get({ plain: true });
+  });
+
+  return res.render("myEvents", {
+    currentPage: "my-events",
+    events,
+    user,
+  });
 };
 
 module.exports = {
@@ -40,4 +65,5 @@ module.exports = {
   renderLoginPage,
   renderSignUpPage,
   renderSearchEventsPage,
+  renderMyEventsPage,
 };

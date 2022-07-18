@@ -13,65 +13,59 @@ const schema = {
     autoIncrement: true,
     primaryKey: true,
   },
-
   title: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-
   end_date: {
     type: DataTypes.DATE,
     allowNull: false,
   },
-
   address: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-
   event_link: {
     type: DataTypes.STRING,
   },
-
   start_date: {
     type: DataTypes.DATE,
     allowNull: false,
   },
-
   map_img_url: {
     type: DataTypes.STRING,
   },
-
   google_map_link: {
     type: DataTypes.STRING,
   },
-
   venue: {
     type: DataTypes.STRING,
   },
-
   rating: {
     type: DataTypes.DOUBLE,
   },
-
   reviews: {
     type: DataTypes.INTEGER,
   },
-
   event_image_url: {
     type: DataTypes.STRING,
   },
-
   ticket_link: {
     type: DataTypes.STRING,
   },
-
   more_info_link: {
     type: DataTypes.STRING,
   },
-
   description: {
     type: DataTypes.STRING,
+  },
+  user_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    foreignKey: {
+      references: User,
+      key: "id",
+    },
   },
 };
 
