@@ -1,4 +1,4 @@
-# What's On - Find the Best Events in Town! [MIT badge](https://img.shields.io/badge/MIT-license-green)
+# What's On - Find the Best Events in Town! ![MIT badge](https://img.shields.io/badge/MIT-license-green)
 
 ## Table of Contents
 
@@ -10,6 +10,7 @@
 - [Technologies](#technologies)
 - [Screenshots](#screenshots)
 - [Acceptance Criteria](#acceptance-criteria)
+- [License](#license)
 - [Conclusion](#conclusion)
 - [Contact](#contact)
 
@@ -64,6 +65,10 @@ THEN the ...
 WHEN I ...
 
 ```
+
+## License
+
+MIT License
 
 ## Conclusion
 
