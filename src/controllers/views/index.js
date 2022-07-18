@@ -1,4 +1,5 @@
 const axios = require("axios");
+const { UserEvents, Events, User } = require("../../models");
 const { getAttributes } = require("../../models/user");
 
 const GOOGLE_EVENTS_URL = "https://serpapi.com/search.json";
@@ -37,34 +38,21 @@ const renderSearchEventsPage = async (req, res) => {
 };
 
 const renderSaveEventsPage = async (req, res) => {
-  const savedCardsFromDb = await savedCards.findAll({
-    where: {
-      userId: req.session.user.id,
-    },
+  const userEventsFromDb = await Events.findAll({
     include: [
       {
-        model: user_events,
-        attributes: ["user_id", "event_id"],
-      },
-      { model: user, attributes: ["first_name", "last_name"] },
-      {
-        model: events,
-        as: "events",
+        model: User,
+        through: UserEvents,
+        where: {
+          user_id: req.session.user.id,
+        },
       },
     ],
-    attributes: [
-      "id",
-      "title",
-      "end_date",
-      "address",
-      "event_link",
-      "start_date",
-      "description",
-    ],
   });
-  const savedCards = savedCardsFromDb.map((savedCard) => {
-    return savedCard.get({ plain: true });
+  const userEvents = userEventsFromDb.map((userEvent) => {
+    return userEvent.get({ plain: true });
   });
+  console.log(userEvents);
 
   return res.render("saved-events", { currentPage: "save-events", savedCards });
 };
