@@ -153,6 +153,4 @@ const openModal = document.getElementById("open-modal");
 
 const close = document.getElementById("close-modal");
 
-openModal.addEventListener("click"){
-  
-}
+openModal.addEventListener("click");
