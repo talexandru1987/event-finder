@@ -31,7 +31,24 @@ const renderSearchEventsPage = async (req, res) => {
   const { data } = await axios.get(GOOGLE_EVENTS_URL, options);
 
   const events = data.events_results.map((event) => {
-    return { ...event, address: event.address.join(" ") };
+    const filteredTicketInfo = event.ticket_info.filter((each) => {
+      return each.link_type === "tickets";
+    });
+
+    return {
+      title: event?.title,
+      address: event.address.join(" "),
+      ticket_info: filteredTicketInfo,
+      date: `${event?.date?.start_date} | ${event?.date?.when}`,
+      rating: event?.venue?.rating,
+      reviews: event?.venue?.reviews,
+      googleMapImage: event?.event_location_map?.image,
+      googleMapLink: event?.event_location_map?.link,
+      eventLink: event?.link,
+      venue: event?.venue?.name,
+      thumbnail: event?.thumbnail,
+      description: event?.description,
+    };
   });
 
   return res.render("searchEvents", {
