@@ -5,7 +5,7 @@
 {{/if}}
 
 <!-- Home Page Image and Title -->
-<div class="flex-container">
+{{!-- <div class="flex-container container-fluid">
   <div class="home-container">
     <img
       src="./assets/images/home-page-images/paint-crowd.jpg"
@@ -26,4 +26,97 @@
 
     <h2 class="h2-title">Discover the best events in town!</h2>
   </div>
-</div>
+</div> --}}
+
+ <!-- Home Image -->
+    <section
+      class="mainhead"
+      style="background-image: url('./assets/images/home-page-images/paint-crowd.jpg')"
+    >
+      <div
+        class="color-overlay d-flex-column justify-content-center align-items-center pt-5"
+      >
+        <h1 class="home-text">
+          Find Out <span class="purple">What's On</span> Near You!
+        </h1>
+      
+
+        <div class="col-md-4 offset-md-4 mt-5 pt-3 search-box">
+          <form id="search-form" class="input-group mb-3">
+            <input
+              type="text"
+              placeholder="Enter Your Location"
+              name="q"
+              id="searchInput"
+            />
+            <div class="input-group-append">
+              <button type="submit">
+                <img src="./assets/images/home-page-images/search.png" />
+              </button>
+            </div>
+          </form>
+        </div>
+        <h2 class="h2-title">Discover the best events in town!</h2>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="my-cards">
+      <div class="container">
+        <h2 class="cards-h1">
+          What is <span class="light-purple">What's On </span>?
+        </h2>
+        <div class="row">
+          <!-- card one -->
+          <div class="col-md-4">
+            <div class="card text-center">
+              <img
+                src="./assets/images/home-page-images/inflatable-course.jpeg"
+                alt=""
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Discover the best events!</h5>
+                <p class="card-text">
+                  Gigs by your favourite musicians, silent disco at the museum
+                  or bingo at the village hall, we have it all!
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- card two -->
+          <div class="col-md-4">
+            <div class="card text-center">
+              <img
+                src="./assets/images/home-page-images/bongos-bingo-2.jpeg"
+                alt=""
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Save Events</h5>
+                <p class="card-text">
+                  Once you discover upcoming events, save them to your profile
+                  so you won't forget them!
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- card three -->
+          <div class="col-md-4">
+            <div class="card text-center">
+              <img
+                src="./assets/images/home-page-images/group-dinner.jpeg"
+                alt=""
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Share with friends!</h5>
+                <p class="card-text">
+                  You can easily share your favourite events with your friends!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
