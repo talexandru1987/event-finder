@@ -6,7 +6,7 @@
 <main id="main">
 <div><h1>Events in your area</h1></div>
 <!-- events cards -->
-<div class="searchEventsTable" id="searchEventsTable">
+<div class="searchEventsTable" id="events-container" data-search-key="{{searchKey}}">
   {{#each events}}
     {{> eventCard}}
   {{/each}}

@@ -1,17 +1,25 @@
-const path = require("path");
+const { Search } = require("../../models");
 
-const searchEvents = (req, res) => {};
+const getSearchBySearchKey = async (req, res) => {
+  const { searchKey } = req.params;
 
-const renderSearchEvents = (req, res) => {
-  //code for rendering the vents page
-  console.log("render the events in the selected city");
-  return res.render("login", { currentPage: "login" });
-};
+  const searchResultFromDb = await Search.findOne({
+    where: {
+      search_key: searchKey,
+    },
+  });
 
-const renderLoginPage = (req, res) => {
-  return res.render("login", { currentPage: "login" });
+  const searchResult = searchResultFromDb.get({ plain: true });
+
+  return res.json({
+    success: true,
+    data: {
+      ...searchResult,
+      search_results: JSON.parse(searchResult.search_results),
+    },
+  });
 };
 
 module.exports = {
-  searchEvents,
+  getSearchBySearchKey,
 };

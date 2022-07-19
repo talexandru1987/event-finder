@@ -3,7 +3,7 @@ const loginForm = $("#login-form");
 const logoutBtn = $("#logout-btn");
 const searchForm = $("#search-form");
 
-const openModal = $("#searchEventsTable");
+const eventsContainer = $("#events-container");
 
 const renderError = (id, message) => {
   const errorDiv = $(`#${id}`);
@@ -144,44 +144,60 @@ const navigateToSearchResults = (event) => {
 };
 
 //open and close modal
-const generateAlertModal = (
-  title,
-  address,
-  thumbnail,
-  ticketslink,
-  location
-) => {
+const handleEventView = async (event) => {
+  const target = $(event.target);
+  const currentTarget = $(event.currentTarget);
+
+  const searchKey = currentTarget.attr("data-search-key");
+  const eventId = target.attr("data-event-id");
+
+  const response = await fetch(`/api/search/${searchKey}`);
+
+  const data = await response.json();
+
+  const searchResults = data.data.search_results;
+
+  const singleEvent = searchResults.find((each) => {
+    return each.id === eventId;
+  });
+
+  console.log(singleEvent);
+
+  $("#eventModal").remove();
+
   // title, address, thumbnail, buy tickets link
   const modal = `<div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" id="modalContainer" >
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">${title}</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="event-card-header">
-        <img src=${thumbnail} alt="rover" />
-      </div>
-      <div class="modal-body">
-        <p>${address} </p>
-      </div>
+    <div class="modal-dialog" id="modalContainer" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">${singleEvent.title}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="event-card-header">
+          <img src=${singleEvent.thumbnail} alt="rover" />
+        </div>
+        <div class="modal-body">
+          <p>${singleEvent.address} </p>
+        </div>
 
-      <div class="modal-footer">
-     
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-         <button type="button" class="btn btn-primary" id="buyTickets"> Buy tickets</button>
-        <button type="button" class="btn btn-primary" id="getLocation"  >Get Location</button>
-        <button type="button" class="btn btn-primary" id="saveEvent" >Save Event</button>
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="buyTickets"> Buy tickets</button>
+          <button type="button" class="btn btn-primary" id="getLocation"  >Get Location</button>
+          <button type="button" class="btn btn-primary" id="saveEvent" >Save Event</button>
+        </div>
       </div>
     </div>
-  </div>
-</div>`;
+  </div>`;
+
   $("#main").append(modal);
+
   const myModal = new bootstrap.Modal(document.getElementById("eventModal"));
+
   myModal.show();
-  // add event listener
-  const modalContainer = $("#modalContainer");
-  modalContainer.click(eventBubbling);
+
+  $("#modalContainer").click(eventBubbling);
 };
 
 const eventBubbling = (event) => {
@@ -192,4 +208,4 @@ signupForm.submit(handleSignup);
 loginForm.submit(handleLogin);
 logoutBtn.click(handleLogout);
 searchForm.submit(navigateToSearchResults);
-openModal.click(generateAlertModal);
+eventsContainer.click(handleEventView);

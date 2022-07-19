@@ -1,5 +1,7 @@
 const axios = require("axios");
-const { Events, User } = require("../../models");
+const { v4: uuidv4 } = require("uuid");
+
+const { Events, User, Search } = require("../../models");
 const { getAttributes } = require("../../models/user");
 
 const GOOGLE_EVENTS_URL = "https://serpapi.com/search.json";
@@ -17,44 +19,61 @@ const renderSignUpPage = (req, res) => {
 };
 
 const renderSearchEventsPage = async (req, res) => {
-  const { q } = req.query;
+  try {
+    const { q } = req.query;
 
-  const options = {
-    params: {
-      q: encodeURI(q),
-      engine: "google_events",
+    const options = {
+      params: {
+        q: encodeURI(q),
+        engine: "google_events",
 
-      api_key: process.env.GOOGLE_API_KEY,
-    },
-  };
+        api_key: process.env.GOOGLE_API_KEY,
+      },
+    };
 
-  const { data } = await axios.get(GOOGLE_EVENTS_URL, options);
+    const { data } = await axios.get(GOOGLE_EVENTS_URL, options);
 
-  const events = data.events_results.map((event) => {
-    const filteredTicketInfo = event.ticket_info.filter((each) => {
-      return each.link_type === "tickets";
+    const events = data?.events_results?.map((event) => {
+      const filteredTicketInfo = event.ticket_info.filter((each) => {
+        return each.link_type === "tickets";
+      });
+
+      return {
+        id: uuidv4(),
+        title: event?.title,
+        address: event.address.join(" "),
+        ticket_info: filteredTicketInfo,
+        date: `${event?.date?.start_date} | ${event?.date?.when}`,
+        rating: event?.venue?.rating,
+        reviews: event?.venue?.reviews,
+        googleMapImage: event?.event_location_map?.image,
+        googleMapLink: event?.event_location_map?.link,
+        eventLink: event?.link,
+        venue: event?.venue?.name,
+        thumbnail: event?.thumbnail,
+        description: event?.description,
+      };
     });
 
-    return {
-      title: event?.title,
-      address: event.address.join(" "),
-      ticket_info: filteredTicketInfo,
-      date: `${event?.date?.start_date} | ${event?.date?.when}`,
-      rating: event?.venue?.rating,
-      reviews: event?.venue?.reviews,
-      googleMapImage: event?.event_location_map?.image,
-      googleMapLink: event?.event_location_map?.link,
-      eventLink: event?.link,
-      venue: event?.venue?.name,
-      thumbnail: event?.thumbnail,
-      description: event?.description,
-    };
-  });
+    const searchKey = uuidv4();
 
-  return res.render("searchEvents", {
-    events,
-    isLoggedIn: req.session.isLoggedIn,
-  });
+    await Search.create({
+      search_key: searchKey,
+      search_results: JSON.stringify(events),
+    });
+
+    return res.render("searchEvents", {
+      events,
+      isLoggedIn: req.session.isLoggedIn,
+      searchKey,
+    });
+  } catch (error) {
+    console.log(
+      `[ERROR]: Failed to render search event page | ${error.message}`
+    );
+
+    return res.render("error");
+  }
 };
 
 const renderMyEventsPage = async (req, res) => {
