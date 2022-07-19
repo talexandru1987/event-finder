@@ -510,6 +510,15 @@ input[type="submit"]:hover {
   color: #545d7a;
 }
 
+/* Contact Page */
+.contact-title {
+  font-size: 2rem;
+  text-align: center;
+  color: #895cf8;
+
+  padding-top: 5vh;
+}
+
 /* media query */
 @media only screen and (max-width: 600px) {
   /* HOME PAGE CSS */
