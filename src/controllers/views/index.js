@@ -16,6 +16,10 @@ const renderSignUpPage = (req, res) => {
   return res.render("signup");
 };
 
+const renderContactPage = (req, res) => {
+  return res.render("contact");
+};
+
 const renderSearchEventsPage = async (req, res) => {
   const { q } = req.query;
 
@@ -66,4 +70,5 @@ module.exports = {
   renderSignUpPage,
   renderSearchEventsPage,
   renderMyEventsPage,
+  renderContactPage,
 };
