@@ -426,14 +426,12 @@ input[type="submit"]:hover {
 
 /* search events modal */
 .modal-container {
-  display: flex;
+  display: none;
   box-sizing: border-box;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-
   position: fixed;
-
-  left: 45%;
+  left: 30%;
   right: 55%;
   bottom: 50%;
   width: 600px;
@@ -442,6 +440,11 @@ input[type="submit"]:hover {
   border-radius: 5px;
   text-align: center;
   margin-bottom: 5px;
+  transition: opacity 0.3s ease;
+}
+
+.modal-container h2 {
+  margin-top: 10px;
 }
 .map {
   display: block;

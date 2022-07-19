@@ -145,3 +145,14 @@ signupForm.submit(handleSignup);
 loginForm.submit(handleLogin);
 logoutBtn.click(handleLogout);
 searchForm.submit(navigateToSearchResults);
+
+//open and close modal
+const modalContainer = document.getElementById("modal-container");
+
+const openModal = document.getElementById("open-modal");
+
+const close = document.getElementById("close-modal");
+
+openModal.addEventListener("click"){
+  
+}
