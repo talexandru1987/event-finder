@@ -338,14 +338,13 @@ input[type="submit"]:hover {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center;
-  /* images that only show on mobile viewports */
 }
 
 /* images that only show on mobile viewports */
 .mobile-image {
   display: none;
 }
-
+/* searched events page */
 .searchEventsTable {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
@@ -423,6 +422,58 @@ input[type="submit"]:hover {
 }
 .user-info small {
   color: #545d7a;
+}
+
+/* search events modal */
+.modal-container {
+  display: flex;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  position: fixed;
+
+  left: 45%;
+  right: 55%;
+  bottom: 50%;
+  width: 600px;
+  height: 300px;
+  max-width: 100%;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.map {
+  display: block;
+  width: 100%;
+  max-height: 265px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  background-color: #a1adb4;
+}
+.modal-buttons {
+  position: absolute;
+  bottom: 3px;
+  width: 50%;
+  text-align: center;
+  align-items: center;
+  border-radius: 25rem;
+  cursor: pointer;
+  margin-left: 25%;
+}
+
+.add-event {
+  margin-right: 10px;
+}
+
+.add-event:hover,
+.add-event:focus {
+  background: hsl(200, 50%, 60%);
+}
+.close:hover:hover,
+.close:focus {
+  background: hsl(200, 50%, 60%);
 }
 
 /* media query */
