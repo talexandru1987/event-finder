@@ -3,6 +3,8 @@ const loginForm = $("#login-form");
 const logoutBtn = $("#logout-btn");
 const searchForm = $("#search-form");
 
+const openModal = $("#searchEventsTable");
+
 const renderError = (id, message) => {
   const errorDiv = $(`#${id}`);
   errorDiv.empty();
@@ -140,17 +142,35 @@ const navigateToSearchResults = (event) => {
 
   window.location.assign(`/search-events?q=${q}`);
 };
+console.log(openModal);
+//open and close modal
+const generateAlertModal = () => {
+  console.log("hello");
+  const modal = `<div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>`;
+  $("#main").append(modal);
+  const myModal = new bootstrap.Modal(document.getElementById("eventModal"));
+  myModal.show();
+};
 
 signupForm.submit(handleSignup);
 loginForm.submit(handleLogin);
 logoutBtn.click(handleLogout);
 searchForm.submit(navigateToSearchResults);
-
-//open and close modal
-const modalContainer = document.getElementById("modal-container");
-
-const openModal = document.getElementById("open-modal");
-
-const close = document.getElementById("close-modal");
-
-openModal.addEventListener("click");
+openModal.click(generateAlertModal);
+const myModal = document.getElementById("myModal");

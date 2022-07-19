@@ -426,7 +426,6 @@ input[type="submit"]:hover {
 
 /* search events modal */
 .modal-container {
-  display: none;
   box-sizing: border-box;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
