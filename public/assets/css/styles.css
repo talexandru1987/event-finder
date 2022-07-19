@@ -523,7 +523,14 @@ input[type="submit"]:hover {
 @media only screen and (max-width: 600px) {
   /* HOME PAGE CSS */
 
-  .home-image {
+  .mainhead {
+    min-height: 80vh;
+  }
+  .home-text .h2-title .search-box input .cards-h1 {
+    font-size: calc(1.525rem + 3.3vw);
+  }
+
+  /* .home-image {
     width: 100%;
     height: 600px;
     object-fit: cover;
@@ -548,7 +555,7 @@ input[type="submit"]:hover {
   .h2-title {
     font-size: 8vw;
     top: 60%;
-  }
+  } */
 
   /* LOGIN PAGE CSS */
   .login-center {
