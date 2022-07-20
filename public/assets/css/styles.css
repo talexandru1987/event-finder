@@ -428,12 +428,12 @@ input[type="submit"]:hover {
 /* my events page */
 .my-events-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 5fr));
   gap: 30px;
   place-items: center;
   position: absolute;
   background: rgba(255, 255, 255, 0.4);
-  top: 55%;
+  top: 30%;
   left: 30%;
   width: 700px;
   height: fit-content;
