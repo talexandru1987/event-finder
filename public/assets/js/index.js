@@ -2,6 +2,7 @@ const signupForm = $("#signup-form");
 const loginForm = $("#login-form");
 const logoutBtn = $("#logout-btn");
 const searchForm = $("#search-form");
+let activeEvent;
 
 const eventsContainer = $("#events-container");
 
@@ -23,14 +24,7 @@ const handleSignup = async (event) => {
   const profile_img_url = $("#profileImageUrl").val();
   const date_of_birth = $("#dateOfBirth").val();
 
-  if (
-    first_name &&
-    last_name &&
-    user_name &&
-    email &&
-    password &&
-    confirmPassword
-  ) {
+  if (first_name && last_name && user_name && email && password && confirmPassword) {
     if (password === confirmPassword) {
       try {
         const payload = {
@@ -59,16 +53,10 @@ const handleSignup = async (event) => {
         if (data.success) {
           window.location.assign("/login");
         } else {
-          renderError(
-            "signup-error",
-            "Failed to create account. Please try again"
-          );
+          renderError("signup-error", "Failed to create account. Please try again");
         }
       } catch (error) {
-        renderError(
-          "signup-error",
-          "Failed to create account. Please try again."
-        );
+        renderError("signup-error", "Failed to create account. Please try again.");
       }
     } else {
       renderError("signup-error", "Passwords do not match. Try again.");
@@ -161,8 +149,7 @@ const handleEventView = async (event) => {
     return each.id === eventId;
   });
 
-  console.log(singleEvent);
-
+  activeEvent = singleEvent;
   $("#eventModal").remove();
 
   // title, address, thumbnail, buy tickets link
@@ -177,8 +164,11 @@ const handleEventView = async (event) => {
           <img src=${singleEvent.thumbnail} alt="rover" />
         </div>
         <div class="modal-body">
-          <p>${singleEvent.address} </p>
+          <p>Address: ${singleEvent.address}</p>
+          <p>Date: ${singleEvent.date} </p>
         </div>
+
+        
 
         <div class="modal-footer">
 
@@ -200,8 +190,16 @@ const handleEventView = async (event) => {
   $("#modalContainer").click(eventBubbling);
 };
 
-const eventBubbling = (event) => {
-  console.log(event.target.id);
+const eventBubbling = async (event) => {
+  if (event.target.id === "saveEvent") {
+    const saveEventResult = await fetch("/api/event", {
+      method: "POST",
+      body: JSON.stringify(activeEvent),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  }
 };
 
 signupForm.submit(handleSignup);
