@@ -64,7 +64,9 @@ const renderSearchEventsPage = async (req, res) => {
       searchKey,
     });
   } catch (error) {
-    console.log(`[ERROR]: Failed to render search event page | ${error.message}`);
+    console.log(
+      `[ERROR]: Failed to render search event page | ${error.message}`
+    );
 
     return res.render("error");
   }

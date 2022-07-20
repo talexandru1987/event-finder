@@ -21,12 +21,7 @@ const getSearchBySearchKey = async (req, res) => {
 };
 
 const createEvent = async (req, res) => {
-  console.log(req.session.user.id);
-  console.log(req.session.isLoggedIn);
   try {
-    if (!req.session.isLoggedIn) {
-      return res.render("login");
-    }
     const tickets = req.body.ticket_info.find((each) => {
       each.link_type === "tickets";
     });
@@ -34,6 +29,7 @@ const createEvent = async (req, res) => {
     const moreInfo = req.body.ticket_info.find((each) => {
       each.link_type === "more info";
     });
+
     const event = {
       title: req.body.title,
       address: req.body.address,
@@ -50,11 +46,14 @@ const createEvent = async (req, res) => {
       user_id: req.session.user.id,
       more_info_link: moreInfo?.link,
     };
+
     await Events.create(event);
+
+    return res.status(200).json({ success: true });
   } catch (error) {
     console.log(`[ERROR]: Failed to save event| ${error.message}`);
 
-    return res.status(401).json({ success: false });
+    return res.status(500).json({ success: false });
   }
 };
 

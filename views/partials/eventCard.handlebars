@@ -17,9 +17,10 @@
       <small>{{date}}</small>
     </div>
   </div>
-  <div class="text-center mb-3"><button
-      id="open-modal"
-      class="btn btn-dark"
-      data-event-id="{{id}}"
-    >See More</button></div>
+  {{#if parent.isLoggedIn}}
+    <div class="text-center mb-3">
+      <button id="open-modal" class="btn btn-dark" data-event-id="{{id}}">See
+        More</button>
+    </div>
+  {{/if}}
 </div>

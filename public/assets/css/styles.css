@@ -384,6 +384,10 @@ input[type="submit"]:hover {
   overflow-wrap: break-word;
 }
 
+.icon-width {
+  width: 40px;
+}
+
 .tag {
   background: #cccccc;
   border-radius: 50px;

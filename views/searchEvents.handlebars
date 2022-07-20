@@ -8,10 +8,7 @@
 <!-- events cards -->
 <div class="row justify-content-center" id="events-container" data-search-key="{{searchKey}}">
   {{#each events}}
-    {{> eventCard}}
+    {{> eventCard parent=../this}}
   {{/each}}
 </div>
 </main>
-
-  
-
