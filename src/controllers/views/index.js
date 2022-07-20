@@ -86,7 +86,6 @@ const renderMyEventsPage = async (req, res) => {
   });
 
   return res.render("myEvents", {
-    currentPage: "my-events",
     events,
     user,
   });

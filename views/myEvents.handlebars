@@ -1,44 +1,25 @@
-{{> publicNavBar}}
+{{> privateNavBar}}
 
-<!-- Home Page Image and Title -->
-    <div class="home-container">
-      <img
-        src="./assets/images/home-page-images/ferris-wheel.jpg"
-        class="home-image"
-        alt=""
-      />
-    </div>
-    <!-- title -->
-    <div class="text-center"><h1>Your Saved Events</h1></div>
-    <!-- card container -->
-    <div class="row-justify-content-center">
-      
-    <div class="event-card">
-      <div class="event-card-header">
-        <img src={{event.thumbnail}} alt="" />
-      </div>
-      <div class="event-card-body">
+<main id="main">
+  {{> friendsModal}}
+  <div><h1 class="text-center dark-purple">My Saved Events</h1></div>
+  <!-- events cards -->
+  <div class="row justify-content-center" id="my-events-container">
+    {{#each events}}
+      {{> myEventCard}}
+    {{/each}}
+  </div>
+</main>
 
-        <h4>
-          {{event.title}}
-        </h4>
-        <p>
-          {{event.description}}
-        </p>
-        <p>
-          {{event.address}}
-        </p>
-        <div>
-
-          <div class="user-info">
-            <h5>{{event.date.start_date}}</h5>
-            <small>{{event.date.when}}</small>
-          </div>
-          
-          <button>Invite Friends</button>
-        </div>
-      </div>
-    </div>
-
-  
-    </div>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+  integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+  crossorigin="anonymous"
+></script>
+<script src="/assets/js/friends.js"></script>
