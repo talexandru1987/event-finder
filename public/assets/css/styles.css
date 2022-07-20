@@ -9,6 +9,96 @@ body {
   /* font-family: "Satisfy", cursive; */
 }
 
+/* NEW HOME PAGE CSS */
+
+.mainhead {
+  background-size: cover;
+  min-height: 75vh;
+  position: relative;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(40, 5, 83, 0.506);
+}
+
+.color-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.home-text {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.search-box {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 60px;
+  padding: 2px 2px;
+  backdrop-filter: blur(4px);
+}
+
+.search-box input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 30px;
+  color: #c75afb;
+}
+.search-box button img {
+  width: 60%;
+}
+
+.search-box button {
+  border: 0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: #895cf8;
+  cursor: pointer;
+}
+
+::placeholder {
+  color: #895cf8;
+}
+
+.h2-title {
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(40, 5, 83, 0.506);
+  font-family: "Satisfy", cursive;
+  padding-top: 5vh;
+}
+/* cards */
+
+.my-cards {
+  background-color: #e1e8f7;
+  padding: 20px 0px;
+  width: 100%;
+}
+
+.cards-h1 {
+  text-align: center;
+  color: #7d52f7;
+}
+
+.light-purple {
+  color: #7d52f7;
+}
+
+.card-title {
+  color: #7d52f7;
+}
+
+.card-text {
+  color: #9472f2;
+}
+
+/* NEW HOME PAGE CSS END */
+
 .flex-container {
   display: flex;
 }
@@ -26,7 +116,7 @@ body {
 }
 
 /* h1 title */
-.home-text {
+/* .home-text {
   position: absolute;
   top: 20%;
   left: 50%;
@@ -36,14 +126,10 @@ body {
   padding-bottom: 20px;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(40, 5, 83, 0.506);
-}
-
-.purple {
-  text-shadow: 2px 2px 4px rgba(40, 5, 83, 0.804);
-}
+} */
 
 /* Container for Search Buttons */
-.search-container {
+/* .search-container {
   position: absolute;
   top: 36%;
   left: 50%;
@@ -53,9 +139,9 @@ body {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-}
+} */
 
-.search-box {
+/* .search-box {
   background: rgba(255, 255, 255, 0.4);
   width: 100%;
   border-radius: 60px;
@@ -63,9 +149,9 @@ body {
   backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
-}
+} */
 
-.search-box input {
+/* .search-box input {
   background: transparent;
   flex: 1;
   border: 0;
@@ -90,9 +176,9 @@ body {
 
 ::placeholder {
   color: #895cf8;
-}
+} */
 
-.h2-title {
+/* .h2-title {
   color: white;
   position: absolute;
   top: 50%;
@@ -100,10 +186,9 @@ body {
   text-align: center;
   transform: translate(-50%, -50%);
   font-size: 30px;
-
   text-shadow: 2px 2px 4px rgba(40, 5, 83, 0.506);
   font-family: "Satisfy", cursive;
-}
+} */
 
 /* login page css */
 .login-center {
@@ -484,11 +569,27 @@ input[type="submit"]:hover {
   background: hsl(200, 50%, 60%);
 }
 
+/* Contact Page */
+.contact-title {
+  font-size: 2rem;
+  text-align: center;
+  color: #895cf8;
+
+  padding-top: 5vh;
+}
+
 /* media query */
 @media only screen and (max-width: 600px) {
   /* HOME PAGE CSS */
 
-  .home-image {
+  .mainhead {
+    min-height: 80vh;
+  }
+  .home-text .h2-title .search-box input .cards-h1 {
+    font-size: calc(1.525rem + 3.3vw);
+  }
+
+  /* .home-image {
     width: 100%;
     height: 600px;
     object-fit: cover;
@@ -513,7 +614,7 @@ input[type="submit"]:hover {
   .h2-title {
     font-size: 8vw;
     top: 60%;
-  }
+  } */
 
   /* LOGIN PAGE CSS */
   .login-center {
