@@ -4,9 +4,9 @@
   {{> publicNavBar }}
 {{/if}}
 <main id="main">
-<div><h1>Events in your area</h1></div>
+<div><h1 class="text-center">Events in your area</h1></div>
 <!-- events cards -->
-<div class="searchEventsTable" id="events-container" data-search-key="{{searchKey}}">
+<div class="row justify-content-center" id="events-container" data-search-key="{{searchKey}}">
   {{#each events}}
     {{> eventCard}}
   {{/each}}
