@@ -3,6 +3,7 @@ const Friends = require("./friends");
 const Invites = require("./invites");
 const Messages = require("./messages");
 const User = require("./user");
+const Search = require("./Search");
 
 // User and Events
 Events.belongsTo(User, {
@@ -29,4 +30,5 @@ module.exports = {
   Invites,
   Messages,
   User,
+  Search,
 };

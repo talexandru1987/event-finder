@@ -3,37 +3,12 @@
 {{else}}
   {{> publicNavBar }}
 {{/if}}
-
-<div><h1>Events in your area</h1></div>
-<!-- events cards -->
-<div class="searchEventsTable">
-  {{#each events as |event|}}
-    <div class="event-card">
-      <div class="event-card-header">
-        <img src={{event.thumbnail}} alt="rover" />
-      </div>
-      <div class="event-card-body">
-
-        <h4>
-          {{event.title}}
-        </h4>
-        <p>
-          {{event.description}}
-        </p>
-        <p>
-          {{event.address}}
-        </p>
-        <div>
-
-          <div class="user-info">
-            <h5>{{event.date.start_date}}</h5>
-            <small>{{event.date.when}}</small>
-          </div>
-          <button>Save Event</button>
-          <button>See More</button>
-        </div>
-      </div>
-    </div>
-
-  {{/each}}
-</div>
+<main id="main">
+  <div><h1 class="text-center dark-purple">Events in your area</h1></div>
+  <!-- events cards -->
+  <div class="row justify-content-center" id="events-container" data-search-key="{{searchKey}}">
+    {{#each events}}
+      {{> eventCard parent=../this}}
+    {{/each}}
+  </div>
+</main>
