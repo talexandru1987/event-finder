@@ -2,7 +2,6 @@ const signupForm = $("#signup-form");
 const loginForm = $("#login-form");
 const logoutBtn = $("#logout-btn");
 const searchForm = $("#search-form");
-let activeEvent;
 
 const eventsContainer = $("#events-container");
 
@@ -149,12 +148,12 @@ const handleEventView = async (event) => {
     return each.id === eventId;
   });
 
-  activeEvent = singleEvent;
   $("#eventModal").remove();
 
   // title, address, thumbnail, buy tickets link
-  const modal = `<div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" id="modalContainer" >
+
+  const modal = `<div class="modal fade bd-example-modal-lg" id="eventModal" tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" id="modalContainer" >
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">${singleEvent.title}</h5>
@@ -164,11 +163,26 @@ const handleEventView = async (event) => {
           <img src=${singleEvent.thumbnail} alt="rover" />
         </div>
         <div class="modal-body">
+
+          <div class="row">
+           <div class="col">
+          <p>${singleEvent.description}</p>
+          <p>Venue: ${singleEvent.venue} </p>
+          <p>Rating: ${singleEvent.rating} </p>
+          <p>Review: ${singleEvent.reviews}  </p>
           <p>Address: ${singleEvent.address}</p>
           <p>Date: ${singleEvent.date} </p>
-        </div>
+          </div>
+          <div class="col">
+          <p>MAP </p>
+          </div>
+          </div>
 
-        
+
+
+
+          
+        </div>
 
         <div class="modal-footer">
 
@@ -187,19 +201,19 @@ const handleEventView = async (event) => {
 
   myModal.show();
 
-  $("#modalContainer").click(eventBubbling);
-};
+  const handleModalClick = async (event) => {
+    if (event.target.id === "saveEvent") {
+      const saveEventResult = await fetch("/api/event", {
+        method: "POST",
+        body: JSON.stringify(singleEvent),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+    }
+  };
 
-const eventBubbling = async (event) => {
-  if (event.target.id === "saveEvent") {
-    const saveEventResult = await fetch("/api/event", {
-      method: "POST",
-      body: JSON.stringify(activeEvent),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-  }
+  $("#modalContainer").click(handleModalClick);
 };
 
 signupForm.submit(handleSignup);

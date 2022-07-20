@@ -27,9 +27,14 @@ const createEvent = async (req, res) => {
     if (!req.session.isLoggedIn) {
       return res.render("login");
     }
+    const tickets = req.body.ticket_info.find((each) => {
+      each.link_type === "tickets";
+    });
 
+    const moreInfo = req.body.ticket_info.find((each) => {
+      each.link_type === "more info";
+    });
     const event = {
-      id: req.body.id,
       title: req.body.title,
       address: req.body.address,
       event_link: req.body.eventLink,
@@ -40,9 +45,10 @@ const createEvent = async (req, res) => {
       rating: req.body.rating,
       reviews: req.body.reviews,
       event_image_url: req.body.thumbnail,
-      ticket_link: req.body.ticket_info[0].link,
+      ticket_link: tickets?.link,
       description: req.body.description,
       user_id: req.session.user.id,
+      more_info_link: moreInfo?.link,
     };
     await Events.create(event);
   } catch (error) {

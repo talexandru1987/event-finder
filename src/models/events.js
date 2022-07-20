@@ -17,10 +17,6 @@ const schema = {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  end_date: {
-    type: DataTypes.DATE,
-    allowNull: true,
-  },
   address: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -29,7 +25,7 @@ const schema = {
     type: DataTypes.STRING,
   },
   start_date: {
-    type: DataTypes.DATE,
+    type: DataTypes.STRING,
     allowNull: false,
   },
   map_img_url: {

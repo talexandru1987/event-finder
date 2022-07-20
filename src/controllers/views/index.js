@@ -34,15 +34,11 @@ const renderSearchEventsPage = async (req, res) => {
     const { data } = await axios.get(GOOGLE_EVENTS_URL, options);
 
     const events = data?.events_results?.map((event) => {
-      const filteredTicketInfo = event.ticket_info.filter((each) => {
-        return each.link_type === "tickets";
-      });
-
       return {
         id: uuidv4(),
         title: event?.title,
         address: event.address.join(" "),
-        ticket_info: filteredTicketInfo,
+        ticket_info: event?.ticket_info,
         date: `${event?.date?.start_date} | ${event?.date?.when}`,
         rating: event?.venue?.rating,
         reviews: event?.venue?.reviews,
@@ -68,9 +64,7 @@ const renderSearchEventsPage = async (req, res) => {
       searchKey,
     });
   } catch (error) {
-    console.log(
-      `[ERROR]: Failed to render search event page | ${error.message}`
-    );
+    console.log(`[ERROR]: Failed to render search event page | ${error.message}`);
 
     return res.render("error");
   }
