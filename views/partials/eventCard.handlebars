@@ -1,22 +1,25 @@
 <div class="event-card mb-5" name="search-event-card">
   <div class="event-card-header">
-    <img src={{thumbnail}} alt="rover" />
+    <img src={{thumbnail}} alt="rover" class="my-3" />
   </div>
   <div class="event-card-body">
-    <h4>
+    <h4 class="dark-purple">
       {{title}}
     </h4>
-    <p>
+    <div class="event-description">
       {{description}}
-    </p>
-    <p>
+    </div>
+    <hr />
+    <div class="event-address mb-2">
       {{address}}
-    </p>
-    <div>
-      <div class="user-info">
-        <small>{{date}}</small>
-      </div>
-      <button id="open-modal" data-event-id="{{id}}">See More</button>
+    </div>
+    <div class="user-info">
+      <small>{{date}}</small>
     </div>
   </div>
+  <div class="text-center mb-3"><button
+      id="open-modal"
+      class="btn btn-dark"
+      data-event-id="{{id}}"
+    >See More</button></div>
 </div>

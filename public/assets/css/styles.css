@@ -346,6 +346,10 @@ input[type="submit"]:hover {
 }
 /* searched events page */
 
+.dark-purple {
+  color: #895cf8;
+}
+
 .event-card {
   margin: 10px;
   background-color: #fff;
@@ -367,6 +371,17 @@ input[type="submit"]:hover {
   align-items: flex-start;
   padding: 20px;
   min-height: 250px;
+}
+
+.event-address {
+  font-size: 14px;
+  height: 40px;
+}
+
+.event-description {
+  height: 140px;
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
 }
 
 .tag {
