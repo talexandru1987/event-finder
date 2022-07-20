@@ -425,6 +425,22 @@ input[type="submit"]:hover {
   color: #545d7a;
 }
 
+/* my events page */
+.my-events-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
+  gap: 30px;
+  place-items: center;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.4);
+  top: 55%;
+  left: 30%;
+  width: 700px;
+  height: fit-content;
+  padding-bottom: 10px;
+  margin-left: 10px;
+}
+
 /* media query */
 @media only screen and (max-width: 600px) {
   /* HOME PAGE CSS */
