@@ -338,28 +338,18 @@ input[type="submit"]:hover {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center;
-  /* images that only show on mobile viewports */
 }
 
 /* images that only show on mobile viewports */
 .mobile-image {
   display: none;
 }
+/* searched events page */
 
-.searchEventsTable {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
-  gap: 30px;
-  place-items: center;
-  position: absolute;
-  background: rgba(255, 255, 255, 0.4);
-  top: 55%;
-  left: 30%;
-  width: 700px;
-  height: fit-content;
-  padding-bottom: 10px;
-  margin-left: 10px;
+.dark-purple {
+  color: #895cf8;
 }
+
 .event-card {
   margin: 10px;
   background-color: #fff;
@@ -381,6 +371,21 @@ input[type="submit"]:hover {
   align-items: flex-start;
   padding: 20px;
   min-height: 250px;
+}
+
+.event-address {
+  font-size: 14px;
+  height: 40px;
+}
+
+.event-description {
+  height: 140px;
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
+}
+
+.icon-width {
+  width: 40px;
 }
 
 .tag {
@@ -423,6 +428,60 @@ input[type="submit"]:hover {
 }
 .user-info small {
   color: #545d7a;
+}
+
+/* search events modal */
+.modal-container {
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  left: 30%;
+  right: 55%;
+  bottom: 50%;
+  width: 600px;
+  height: 300px;
+  max-width: 100%;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 5px;
+  transition: opacity 0.3s ease;
+}
+
+.modal-container h2 {
+  margin-top: 10px;
+}
+.map {
+  display: block;
+  width: 100%;
+  max-height: 265px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  background-color: #a1adb4;
+}
+.modal-buttons {
+  position: absolute;
+  bottom: 3px;
+  width: 50%;
+  text-align: center;
+  align-items: center;
+  border-radius: 25rem;
+  cursor: pointer;
+  margin-left: 25%;
+}
+
+.add-event {
+  margin-right: 10px;
+}
+
+.add-event:hover,
+.add-event:focus {
+  background: hsl(200, 50%, 60%);
+}
+.close:hover:hover,
+.close:focus {
+  background: hsl(200, 50%, 60%);
 }
 
 /* media query */
