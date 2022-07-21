@@ -106,9 +106,7 @@ WHEN I navigate to the My Events page, I can send the event to a friend
 
 # Conclusion
 
-To conclude, this was a very fun and challenging project. We successfully load a variety of event cards for a given location. A preferred event can be saved.
-
-~ Abdilatif, Alex, Gurmanpreet, Jinyi and Sophia!
+To conclude, this was a very fun and challenging project. We successfully load a variety of event cards for a given location. A preferred event can be saved. Bringing in the Web API, rather than just seeding the database ourselves, bought its own challenges which we faced successfully!
 
 # Contact
 
