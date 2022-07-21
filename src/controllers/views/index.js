@@ -123,30 +123,32 @@ const renderMyEventsPage = async (req, res) => {
 
 const renderMyInvitesPage = async (req, res) => {
   try {
-    const userInvites = await Invites.findAll({
+    const invitesFromDb = await Invites.findAll({
+      where: {
+        friend_id: req.session.user.id,
+      },
       include: [
         {
           model: User,
           attributes: [
+            "id",
             "first_name",
             "last_name",
             "user_name",
             "profile_img_url",
           ],
         },
+        {
+          model: Events,
+        },
       ],
-      where: {
-        user_id: req.session.user.id,
-        status: true,
-      },
-      attributes: ["id", "user_id", "friends_id", "events_id"],
     });
 
-    let invitesList = userInvites.map((invite) => {
+    const invites = invitesFromDb.map((invite) => {
       return invite.get({ plain: true });
     });
 
-    console.log(invitesList);
+    console.log(invites);
 
     return res.render("myInvites");
   } catch (error) {
