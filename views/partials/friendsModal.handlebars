@@ -9,7 +9,8 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <h2 class="dark-purple modal-title" id="exampleModalLabel">Invite Your
+          Friends!</h2>
         <button
           type="button"
           class="btn-close"
@@ -17,28 +18,46 @@
           aria-label="Close"
         ></button>
       </div>
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label
-              for="recipient-name"
-              class="col-form-label"
-            >Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name" />
+      <div class="modal-body d-flex justify-content-center align-items-center">
+        <!-- friend 1 -->
+
+        <div class="card m-2 border border-dark">
+          <img
+            class="card-img-top mt-4"
+            src="/assets/images/error-page/error-image.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title text-center">Ben Dover</h5>
+            <p class="card-text text-center">Send this event to Ben!</p>
+            <a
+              href="#"
+              class="btn btn-dark d-flex justify-content-center"
+            >Invite</a>
           </div>
-          <div class="mb-3">
-            <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+        </div>
+
+        <!-- friend 2 -->
+
+        <div class="card m-2 border border-dark">
+          <img
+            class="card-img-top mt-4"
+            src="/assets/images/error-page/error-image.png"
+            alt="Card image cap"
+          />
+          <div class="card-body">
+            <h5 class="card-title text-center">Bob Smith</h5>
+            <p class="card-text text-center">Send this event to Bob!</p>
+            <a
+              href="#"
+              class="btn btn-dark d-flex justify-content-center"
+            >Invite</a>
           </div>
-        </form>
+        </div>
+
       </div>
       <div class="modal-footer">
-        <button
-          type="button"
-          class="btn btn-secondary"
-          data-bs-dismiss="modal"
-        >Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
+        <button type="button" class="btn btn-dark">Send message</button>
       </div>
     </div>
   </div>
