@@ -59,10 +59,16 @@ Mobile viewport
 ## Acceptance Criteria
 
 ```
-GIVEN I am ...
-WHEN I ...
-THEN the ...
-WHEN I ...
+GIVEN I am a user looking for a recreational event
+WHEN I visit the site
+THEN I am presented with the homepage, nav bar (with the option to login / sign up) and a search bar
+WHEN I type my location into the search bar
+THEN I am presented with a list of events that will be occuring in the future
+WHEN I sign up and login in
+THEN I the list of events displays a 'save' button
+WHEN I find an event I would like to attend
+THEN I can save the event to My Events page
+WHEN I navigate to the My Events page, I can send the event to a friend
 
 ```
 
@@ -79,8 +85,8 @@ To conclude ...
 # Contact
 
 If you have any questions, please contact the team:
-Abdilatif
-Alex
-Gurmanpreet
-Jinyi
-Sophia
+[Abdilatif](https://github.com/awarsame1996/),
+[Alex](https://github.com/talexandru1987),
+[Gurmanpreet](https://github.com/Mkn01),
+[Jinyi](https://github.com/jinyiyu) &
+[Sophia](https://github.com/sophia4422)
