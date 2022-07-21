@@ -10,7 +10,6 @@
 - [Technologies](#technologies)
 - [Screenshots](#screenshots)
 - [Acceptance Criteria](#acceptance-criteria)
-- [License](#license)
 - [Conclusion](#conclusion)
 - [Contact](#contact)
 
@@ -24,9 +23,11 @@ Are you looking for the best events in town? With What's On, discover new places
 
 # The What's On Experience
 
-When a user lands on the homepage, they are presented with a search bar where they can add their local town name. When the search button is pressed, they are taken to a new page where a list of upcoming events will be displayed.
+When a user lands on the homepage, they are presented with a search bar where they can add their location e.g. Orlando. When the search button is pressed, they are taken to a new page where a list of upcoming events are displayed.
 
 A user can sign up and login. When a user is logged in, they can save their choice of events and send them to their friends.
+
+Even if the user is not logged in, they can still search for events in their chosen location.
 
 ## User Story
 
@@ -42,13 +43,23 @@ Add Wireframes here
 
 ## Technologies
 
-This project implements a variety of frontend and backend technologies:
-HTML
-CSS
-Javascript
-Web API
-MySQL
-Node.JS
+| This project implements a variety of frontend and backend technologies: |
+| ----------------------------------------------------------------------- |
+| HTML                                                                    |
+| CSS                                                                     |
+| Javascript                                                              |
+| Handlebars                                                              |
+| Express                                                                 |
+| Axios                                                                   |
+| Bootstrap                                                               |
+| Web API (Google Events API)                                             |
+| MySQL                                                                   |
+| Sequelize                                                               |
+| bcrypt                                                                  |
+| Nodemon                                                                 |
+| Node.JS                                                                 |
+| dotenv                                                                  |
+| Heroku                                                                  |
 
 ## Screenshots
 
@@ -75,6 +86,7 @@ Home Page:
 ![Home Page Continued](./public/assets/images/readme/whatson-mobile-two.png)
 
 </details>
+<br/>
 
 ## Acceptance Criteria
 
@@ -92,13 +104,9 @@ WHEN I navigate to the My Events page, I can send the event to a friend
 
 ```
 
-## License
-
-MIT License
-
 # Conclusion
 
-To conclude ...
+To conclude, this was a very fun and challenging project. We successfully load a variety of event cards for a given location. A preferred event can be saved.
 
 ~ Abdilatif, Alex, Gurmanpreet, Jinyi and Sophia!
 
