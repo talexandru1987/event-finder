@@ -1,7 +1,7 @@
 const axios = require("axios");
 const { v4: uuidv4 } = require("uuid");
 
-const { Events, User, Search } = require("../../models");
+const { Events, User, Search, Invites } = require("../../models");
 const { getAttributes } = require("../../models/user");
 
 const GOOGLE_EVENTS_URL = "https://serpapi.com/search.json";
@@ -68,9 +68,7 @@ const renderSearchEventsPage = async (req, res) => {
       searchKey,
     });
   } catch (error) {
-    console.log(
-      `[ERROR]: Failed to render search event page | ${error.message}`
-    );
+    console.log(`[ERROR]: Failed to render search event page | ${error.message}`);
 
     return res.render("error");
   }
@@ -95,8 +93,33 @@ const renderMyEventsPage = async (req, res) => {
   });
 };
 
-const renderMyInvitesPage = (req, res) => {
-  return res.render("myInvites");
+const renderMyInvitesPage = async (req, res) => {
+  try {
+    const userInvites = await Invites.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ["first_name", "last_name", "user_name", "profile_img_url"],
+        },
+      ],
+      where: {
+        user_id: req.session.user.id,
+        status: true,
+      },
+      attributes: ["id", "user_id", "friends_id", "events_id"],
+    });
+
+    let invitesList = userInvites.map((invite) => {
+      return invite.get({ plain: true });
+    });
+
+    console.log(invitesList);
+
+    return res.render("myInvites");
+  } catch (error) {
+    console.error(`ERROR | ${error.message}`);
+    return res.status(500).json(error);
+  }
 };
 
 module.exports = {

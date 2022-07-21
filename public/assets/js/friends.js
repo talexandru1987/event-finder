@@ -1,5 +1,5 @@
-const friendModal = new bootstrap.Modal(
-  document.getElementById("friends-modal")
-);
+// const friendModal = new bootstrap.Modal(
+//   document.getElementById("friends-modal")
+// );
 
-friendModal.show();
+// friendModal.show();
