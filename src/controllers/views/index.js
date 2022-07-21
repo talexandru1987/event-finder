@@ -95,6 +95,10 @@ const renderMyEventsPage = async (req, res) => {
   });
 };
 
+const renderMyInvitesPage = (req, res) => {
+  return res.render("myInvites");
+};
+
 module.exports = {
   renderHomePage,
   renderLoginPage,
@@ -102,4 +106,5 @@ module.exports = {
   renderSearchEventsPage,
   renderMyEventsPage,
   renderContactPage,
+  renderMyInvitesPage,
 };
