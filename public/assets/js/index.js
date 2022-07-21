@@ -231,12 +231,16 @@ const handleEventView = async (event) => {
           </div>
         </div>
         <div class="modal-footer">
+        <a href="${singleEvent.eventLink}" target="_blank""">
           <button type="button" class="btn btn-dark" id="buyTickets">
             Buy tickets
           </button>
+          </a>
+          <a href="${singleEvent.googleMapLink}" target="_blank"">
           <button type="button" class="btn btn-dark" id="getLocation">
             Get Location
           </button>
+          </a>
           <button type="button" class="btn btn-success" id="saveEvent">
             Save Event
           </button>
