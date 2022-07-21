@@ -204,6 +204,7 @@ body {
 } */
 
 /* login page css */
+
 .login-center {
   position: absolute;
   top: 38%;
@@ -632,7 +633,7 @@ input[type="submit"]:hover {
   } */
 
   /* LOGIN PAGE CSS */
-  .login-center {
+  .login-center .login-center-two {
     width: 80%;
     position: absolute;
     top: 40%;
