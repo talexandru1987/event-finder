@@ -9,6 +9,12 @@ body {
   /* font-family: "Satisfy", cursive; */
 }
 
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* NEW HOME PAGE CSS */
 
 .mainhead {
@@ -199,12 +205,13 @@ body {
 
 /* login page css */
 .login-center {
-  position: fixed;
-  /* top: 50%;
+  position: absolute;
+  top: 38%;
   left: 50%;
-  transform: translate(-50%, -50%); */
-  width: 500px;
-  height: 800px;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  width: 100%;
+  height: auto;
   background: rgba(255, 255, 255, 0.768);
   border-radius: 10px;
   backdrop-filter: blur(4px);
@@ -628,6 +635,6 @@ input[type="submit"]:hover {
   .login-center {
     width: 80%;
     position: absolute;
-    top: 45%;
+    top: 40%;
   }
 }
