@@ -25,7 +25,7 @@ const schema = {
     },
   },
 
-  friends_id: {
+  friend_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
     foreignKey: {
@@ -34,7 +34,7 @@ const schema = {
     },
   },
 
-  events_id: {
+  event_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
     foreignKey: {
@@ -43,7 +43,7 @@ const schema = {
     },
   },
 
-  status: {
+  hasAccepted: {
     type: DataTypes.BOOLEAN,
     defaultValue: false,
   },

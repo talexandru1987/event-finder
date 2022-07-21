@@ -1,26 +1,22 @@
 [
   {
     "user_id": "1",
-    "friends_id": "2",
-    "events_id": "2",
-    "status": true
+    "friend_id": "2",
+    "event_id": "2"
+  },
+  {
+    "user_id": "1",
+    "friend_id": "3",
+    "event_id": "1"
   },
   {
     "user_id": "2",
-    "friends_id": "1",
-    "events_id": "1",
-    "status": false
+    "friend_id": "4",
+    "event_id": "3"
   },
   {
-    "user_id": "3",
-    "friends_id": "4",
-    "events_id": "3",
-    "status": true
-  },
-  {
-    "user_id": "4",
-    "friends_id": "2",
-    "events_id": "4",
-    "status": false
+    "user_id": "2",
+    "friend_id": "3",
+    "event_id": "4"
   }
 ]

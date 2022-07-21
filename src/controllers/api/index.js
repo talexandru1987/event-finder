@@ -1,4 +1,4 @@
-const { Search, Events } = require("../../models");
+const { Search, Events, Invites } = require("../../models");
 
 const getSearchBySearchKey = async (req, res) => {
   const { searchKey } = req.params;
@@ -57,7 +57,29 @@ const createEvent = async (req, res) => {
   }
 };
 
+const createInvite = async (req, res) => {
+  try {
+    const { event_id, friend_id } = req.body;
+    const { id } = req.session.user;
+
+    const invite = {
+      user_id: id,
+      friend_id,
+      event_id,
+    };
+
+    await Invites.create(invite);
+
+    return res.status(200).json({ success: true });
+  } catch (error) {
+    console.log(`[ERROR]: Failed to save invite | ${error.message}`);
+
+    return res.status(500).json({ success: false });
+  }
+};
+
 module.exports = {
   getSearchBySearchKey,
   createEvent,
+  createInvite,
 };

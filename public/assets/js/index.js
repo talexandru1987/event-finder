@@ -24,7 +24,14 @@ const handleSignup = async (event) => {
   const profile_img_url = $("#profileImageUrl").val();
   const date_of_birth = $("#dateOfBirth").val();
 
-  if (first_name && last_name && user_name && email && password && confirmPassword) {
+  if (
+    first_name &&
+    last_name &&
+    user_name &&
+    email &&
+    password &&
+    confirmPassword
+  ) {
     if (password === confirmPassword) {
       try {
         const payload = {
@@ -53,10 +60,16 @@ const handleSignup = async (event) => {
         if (data.success) {
           window.location.assign("/login");
         } else {
-          renderError("signup-error", "Failed to create account. Please try again");
+          renderError(
+            "signup-error",
+            "Failed to create account. Please try again"
+          );
         }
       } catch (error) {
-        renderError("signup-error", "Failed to create account. Please try again.");
+        renderError(
+          "signup-error",
+          "Failed to create account. Please try again."
+        );
       }
     } else {
       renderError("signup-error", "Passwords do not match. Try again.");
@@ -264,21 +277,23 @@ const handleEventView = async (event) => {
   $("#modalContainer").click(handleModalClick);
 };
 
-const handleInviteFriend = (event) => {
-  const friendModal = new bootstrap.Modal(document.getElementById("friends-modal"));
+const handleInviteFriend = async (event) => {
+  const friendModal = new bootstrap.Modal(
+    document.getElementById("friends-modal")
+  );
 
   const postContent = { title, description, userId };
-  
-    const options = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      redirect: "follow",
-      body: JSON.stringify(postContent),
-    };
-  
-    const response = await fetch("/api/posts", options);
+
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    redirect: "follow",
+    body: JSON.stringify(postContent),
+  };
+
+  const response = await fetch("/api/posts", options);
 
   friendModal.show();
 };
