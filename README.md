@@ -33,7 +33,7 @@ A user can sign up and login. When a user is logged in, they can save their choi
 ```
 AS A user looking for recreation activities in my free time
 I WANT to view the latest events in my local area
-SO THAT I can find new places and experiences to enjoy
+SO THAT I can find new places and experiences to enjoy and share them with my friends
 ```
 
 ## Tools
@@ -54,7 +54,27 @@ Node.JS
 
 Desktop viewport
 
+<details>
+<summary>Home Page</summary>
+
+![Home Page](./public/assets/images/readme/whatson-home.png)
+
+![Home Page Continued](public/assets/images/readme/whatson-home-2.png)
+
+</details>
+
+<br/>
 Mobile viewport
+
+<details>
+<summary>Home Page</summary>
+
+Home Page:
+![Home Page](./public/assets/images/readme/home-mobile.png)
+
+![Home Page Continued](./public/assets/images/readme/whatson-mobile-two.png)
+
+</details>
 
 ## Acceptance Criteria
 
