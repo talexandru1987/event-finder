@@ -23,18 +23,13 @@ const schema = {
     },
   },
 
-  friends_id: {
+  friend_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
     foreignKey: {
       references: User,
       key: "id",
     },
-  },
-
-  status: {
-    type: DataTypes.BOOLEAN,
-    defaultValue: false,
   },
 };
 

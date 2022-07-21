@@ -22,47 +22,29 @@
         class="modal-body d-flex justify-content-center align-items-center"
         id="friends-container"
       >
-        <!-- friend 1 -->
-        <div class="card m-2 border border-dark">
-          <img
-            class="img-thumbnail"
-            src="/assets/images/error-page/error-image.png"
-            alt="Card image cap"
-          />
-          <div class="card-body">
-            <h5 class="card-title text-center">Ben Dover</h5>
-            <hr />
-            <p class="card-text text-center">Send this event to Ben!</p>
-            <div class="text-center mb-3">
-              <button
-                id="1"
-                class="btn btn-dark"
-                name="invite-friend-btn"
-              >Invite Friend</button>
+        {{#each friends}}
+          <div class="card m-2 border border-dark">
+            <img
+              class="img-thumbnail"
+              src="{{profile_img_url}}"
+              alt="{{first_name}} {{last_name}}"
+            />
+            <div class="card-body">
+              <h5 class="card-title text-center">{{first_name}}
+                {{last_name}}</h5>
+              <hr />
+              <p class="card-text text-center">Send this event to
+                {{user_name}}!</p>
+              <div class="text-center mb-3">
+                <button
+                  id="{{id}}"
+                  class="btn btn-dark"
+                  name="invite-friend-btn"
+                >Invite Friend</button>
+              </div>
             </div>
           </div>
-        </div>
-
-        <!-- friend 2 -->
-        <div class="card m-2 border border-dark">
-          <img
-            class="img-thumbnail"
-            src="/assets/images/error-page/error-image.png"
-            alt="Card image cap"
-          />
-          <div class="card-body">
-            <h5 class="card-title text-center">Bob Smith</h5>
-            <hr />
-            <p class="card-text text-center">Send this event to Bob!</p>
-            <div class="text-center mb-3">
-              <button
-                id="2"
-                class="btn btn-dark"
-                name="invite-friend-btn"
-              >Invite Friend</button>
-            </div>
-          </div>
-        </div>
+        {{/each}}
       </div>
     </div>
   </div>
