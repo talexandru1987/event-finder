@@ -68,9 +68,7 @@ const renderSearchEventsPage = async (req, res) => {
       searchKey,
     });
   } catch (error) {
-    console.log(
-      `[ERROR]: Failed to render search event page | ${error.message}`
-    );
+    console.log(`[ERROR]: Failed to render search event page | ${error.message}`);
 
     return res.render("error");
   }
@@ -96,13 +94,7 @@ const renderMyEventsPage = async (req, res) => {
     include: [
       {
         model: User,
-        attributes: [
-          "id",
-          "first_name",
-          "last_name",
-          "user_name",
-          "profile_img_url",
-        ],
+        attributes: ["id", "first_name", "last_name", "user_name", "profile_img_url"],
       },
     ],
     attributes: [],
@@ -111,8 +103,6 @@ const renderMyEventsPage = async (req, res) => {
   const friends = friendsFromDb.map((friend) => {
     return friend.get({ plain: true }).user;
   });
-
-  console.log(friends);
 
   return res.render("myEvents", {
     events,
@@ -130,13 +120,7 @@ const renderMyInvitesPage = async (req, res) => {
       include: [
         {
           model: User,
-          attributes: [
-            "id",
-            "first_name",
-            "last_name",
-            "user_name",
-            "profile_img_url",
-          ],
+          attributes: ["id", "first_name", "last_name", "user_name", "profile_img_url"],
         },
         {
           model: Events,
@@ -148,9 +132,7 @@ const renderMyInvitesPage = async (req, res) => {
       return invite.get({ plain: true });
     });
 
-    console.log(invites);
-
-    return res.render("myInvites");
+    return res.render("myInvites", { invites });
   } catch (error) {
     console.error(`ERROR | ${error.message}`);
     return res.status(500).json(error);

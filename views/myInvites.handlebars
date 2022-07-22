@@ -4,7 +4,13 @@
   
   <div><h1 class="text-center dark-purple">My Invites</h1></div>
   <!-- events cards -->
-  <div class="row justify-content-center" id="my-events-container" data-userId ="{{user}}">
+  <div class="row justify-content-center" id="my-friend-invites-container" data-userId ="{{user}}">
+
+    {{#each invites}}
+      
+      {{> friendEventCard parent=../this }}
+    
+    {{/each}}
     
   </div>
 </main>

@@ -78,8 +78,37 @@ const createInvite = async (req, res) => {
   }
 };
 
+const acceptFriendInvite = async (req, res) => {
+  try {
+    const { id, status } = req.body;
+
+    if (status) {
+      //accept
+      await Invites.update(
+        { hasAccepted: true },
+        {
+          where: {
+            id,
+          },
+        }
+      );
+    } else {
+      //delete
+      await Invites.destroy({
+        where: {
+          id,
+        },
+      });
+    }
+    return res.status(200).json({ success: true, status: 0 });
+  } catch (error) {
+    return res.status(500).json({ success: false, status: 1 });
+  }
+};
+
 module.exports = {
   getSearchBySearchKey,
   createEvent,
   createInvite,
+  acceptFriendInvite,
 };

@@ -6,10 +6,12 @@ const inviteFriendBtn = $("#open-modal");
 
 const eventsContainer = $("#events-container");
 
+const friendInvites = $("#my-friend-invites-container");
+
 const renderError = (id, message) => {
   const errorDiv = $(`#${id}`);
   errorDiv.empty();
-  errorDiv.append(`<div class="text-center text-danger">${message}</div>;`);
+  errorDiv.append(`<div class="text-center text-danger">${message}</div>`);
 };
 
 const handleSignup = async (event) => {
@@ -24,14 +26,7 @@ const handleSignup = async (event) => {
   const profile_img_url = $("#profileImageUrl").val();
   const date_of_birth = $("#dateOfBirth").val();
 
-  if (
-    first_name &&
-    last_name &&
-    user_name &&
-    email &&
-    password &&
-    confirmPassword
-  ) {
+  if (first_name && last_name && user_name && email && password && confirmPassword) {
     if (password === confirmPassword) {
       try {
         const payload = {
@@ -44,8 +39,6 @@ const handleSignup = async (event) => {
           profile_img_url,
           date_of_birth,
         };
-
-        console.log(payload);
 
         const response = await fetch("/auth/signup", {
           method: "POST",
@@ -60,16 +53,10 @@ const handleSignup = async (event) => {
         if (data.success) {
           window.location.assign("/login");
         } else {
-          renderError(
-            "signup-error",
-            "Failed to create account. Please try again"
-          );
+          renderError("signup-error", "Failed to create account. Please try again");
         }
       } catch (error) {
-        renderError(
-          "signup-error",
-          "Failed to create account. Please try again."
-        );
+        renderError("signup-error", "Failed to create account. Please try again.");
       }
     } else {
       renderError("signup-error", "Passwords do not match. Try again.");
@@ -78,8 +65,6 @@ const handleSignup = async (event) => {
   } else {
     renderError("signup-error", "Please complete all required fields.");
   }
-
-  console.log("submit");
 };
 
 const handleLogin = async (event) => {
@@ -119,7 +104,6 @@ const handleLogin = async (event) => {
 };
 
 const handleLogout = async () => {
-  console.log("logout");
   try {
     const response = await fetch("/auth/logout", {
       method: "POST",
@@ -132,7 +116,7 @@ const handleLogout = async () => {
       window.location.assign("/");
     }
   } catch (error) {
-    console.log("Failed to logout");
+    console.error("Failed to logout");
   }
 };
 
@@ -278,9 +262,7 @@ const handleEventView = async (event) => {
 };
 
 const handleInviteFriend = async (event) => {
-  const friendModal = new bootstrap.Modal(
-    document.getElementById("friends-modal")
-  );
+  const friendModal = new bootstrap.Modal(document.getElementById("friends-modal"));
 
   const postContent = { title, description, userId };
 
@@ -298,9 +280,35 @@ const handleInviteFriend = async (event) => {
   friendModal.show();
 };
 
+const handleInviteStatusChange = (event) => {
+  if (event.target.id === "friendEvent-accept") {
+    handleAcceptFriendInvite(event.target.getAttribute("data-friendEvent-id"), true);
+  } else if (event.target.id === "friendEvent-decline") {
+    handleAcceptFriendInvite(event.target.getAttribute("data-friendEvent-id"), false);
+  }
+};
+
+const handleAcceptFriendInvite = async (id, status) => {
+  console.log(`accept event  id ${id}`);
+
+  const options = {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    redirect: "follow",
+    body: JSON.stringify({ id, status }),
+  };
+
+  await fetch("/api/friend-invite", options);
+
+  location.reload();
+};
+
 signupForm.submit(handleSignup);
 loginForm.submit(handleLogin);
 logoutBtn.click(handleLogout);
 searchForm.submit(navigateToSearchResults);
 eventsContainer.click(handleEventView);
 inviteFriendBtn.click(handleInviteFriend);
+friendInvites.click(handleInviteStatusChange);
