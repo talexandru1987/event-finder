@@ -6,6 +6,7 @@ const connectSessionSequelize = require("connect-session-sequelize");
 
 const connection = require("./config/connection");
 const routes = require("./routes");
+const helpers = require("./helpers");
 
 const PORT = process.env.PORT || 4000;
 
@@ -26,7 +27,7 @@ const sessionOptions = {
   }),
 };
 
-const hbs = exphbs.create({});
+const hbs = exphbs.create({ helpers });
 
 const app = express();
 
@@ -49,7 +50,7 @@ const init = async () => {
       console.log(`Server running on http://localhost:${PORT}`);
     });
   } catch (error) {
-    console.log(`[ERROR]: Failed to start server | ${error.message}`);
+    console.error(`[ERROR]: Failed to start server | ${error.message}`);
   }
 };
 

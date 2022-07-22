@@ -9,6 +9,12 @@ body {
   /* font-family: "Satisfy", cursive; */
 }
 
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* NEW HOME PAGE CSS */
 
 .mainhead {
@@ -17,6 +23,13 @@ body {
   position: relative;
   color: white;
   text-shadow: 2px 2px 4px rgba(40, 5, 83, 0.506);
+}
+
+/* login and sign up bg*/
+.background-pic {
+  background-size: cover;
+  min-height: 140vh;
+  position: relative;
 }
 
 .color-overlay {
@@ -191,12 +204,15 @@ body {
 } */
 
 /* login page css */
+
 .login-center {
   position: absolute;
-  top: 55%;
+  top: 38%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
+  height: auto;
   background: rgba(255, 255, 255, 0.768);
   border-radius: 10px;
   backdrop-filter: blur(4px);
@@ -582,7 +598,7 @@ input[type="submit"]:hover {
 @media only screen and (max-width: 600px) {
   /* HOME PAGE CSS */
 
-  .mainhead {
+  .mainhead .background-pic {
     min-height: 80vh;
   }
   .home-text .h2-title .search-box input .cards-h1 {
@@ -617,9 +633,9 @@ input[type="submit"]:hover {
   } */
 
   /* LOGIN PAGE CSS */
-  .login-center {
+  .login-center .login-center-two {
     width: 80%;
     position: absolute;
-    top: 45%;
+    top: 40%;
   }
 }

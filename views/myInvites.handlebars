@@ -1,13 +1,17 @@
 {{> privateNavBar}}
 
 <main id="main">
-  {{> friendsModal parent=../this}}
-  <div><h1 class="text-center dark-purple">My Saved Events</h1></div>
+  
+  <div><h1 class="text-center dark-purple">My Invites</h1></div>
   <!-- events cards -->
-  <div class="row justify-content-center" id="my-events-container">
-    {{#each events}}
-      {{> myEventCard}}
+  <div class="row justify-content-center" id="my-friend-invites-container" data-userId ="{{user}}">
+
+    {{#each invites}}
+      
+      {{> friendEventCard parent=../this }}
+    
     {{/each}}
+    
   </div>
 </main>
 

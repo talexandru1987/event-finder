@@ -32,9 +32,7 @@ const login = async (req, res) => {
 };
 
 const signup = async (req, res) => {
-  console.log(req.body);
   try {
-    console.log(req.body);
     const { first_name, last_name, user_name, password, email, profile_img_url, date_of_birth } =
       req.body;
 

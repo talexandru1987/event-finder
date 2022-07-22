@@ -1,7 +1,7 @@
 const axios = require("axios");
 const { v4: uuidv4 } = require("uuid");
 
-const { Events, User, Search } = require("../../models");
+const { Events, User, Search, Invites, Friends } = require("../../models");
 const { getAttributes } = require("../../models/user");
 
 const GOOGLE_EVENTS_URL = "https://serpapi.com/search.json";
@@ -68,9 +68,7 @@ const renderSearchEventsPage = async (req, res) => {
       searchKey,
     });
   } catch (error) {
-    console.log(
-      `[ERROR]: Failed to render search event page | ${error.message}`
-    );
+    console.log(`[ERROR]: Failed to render search event page | ${error.message}`);
 
     return res.render("error");
   }
@@ -89,10 +87,56 @@ const renderMyEventsPage = async (req, res) => {
     return event.get({ plain: true });
   });
 
+  const friendsFromDb = await Friends.findAll({
+    where: {
+      user_id: user.id,
+    },
+    include: [
+      {
+        model: User,
+        attributes: ["id", "first_name", "last_name", "user_name", "profile_img_url"],
+      },
+    ],
+    attributes: [],
+  });
+
+  const friends = friendsFromDb.map((friend) => {
+    return friend.get({ plain: true }).user;
+  });
+
   return res.render("myEvents", {
     events,
     user,
+    friends,
   });
+};
+
+const renderMyInvitesPage = async (req, res) => {
+  try {
+    const invitesFromDb = await Invites.findAll({
+      where: {
+        friend_id: req.session.user.id,
+      },
+      include: [
+        {
+          model: User,
+          attributes: ["id", "first_name", "last_name", "user_name", "profile_img_url"],
+        },
+        {
+          model: Events,
+        },
+      ],
+    });
+
+    const invites = invitesFromDb.map((invite) => {
+      return invite.get({ plain: true });
+    });
+
+    return res.render("myInvites", { invites });
+  } catch (error) {
+    console.error(`ERROR | ${error.message}`);
+    return res.status(500).json(error);
+  }
 };
 
 module.exports = {
@@ -102,4 +146,5 @@ module.exports = {
   renderSearchEventsPage,
   renderMyEventsPage,
   renderContactPage,
+  renderMyInvitesPage,
 };

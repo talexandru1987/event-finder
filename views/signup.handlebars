@@ -1,56 +1,55 @@
 {{> publicNavBar}}
 
-    <div class="home-container">
-      <img
-        src="./assets/images/home-page-images/concert-purple.jpg"
-        class="home-image"
-        alt="crowd at a concert"
-      />
-    </div>
 
-    <!-- Sign Up -->
+ <section
+      class="background-pic"
+      style="background-image: url('./assets/images/home-page-images/concert-purple.jpg')">
+
+
+      <!-- Sign Up -->
+      <div class="flex-container">
     <div class="login-center">
       <h1>Sign Up to What's On!</h1>
       <form method="post" id="signup-form">
         <!-- first name -->
         <div class="text-field">
           <input  id="firstName"
-          type="text" required />
+          type="text"  />
           <label>First Name</label>
         </div>
         <!-- last name -->
         <div class="text-field">
           <input 
           id="lastName"
-          type="text" required />
+          type="text"  />
           <label>Last Name</label>
         </div>
         <!-- user name -->
         <div class="text-field">
           <input 
           id="userName"
-          type="text" required />
+          type="text"  />
           <label>Username</label>
         </div>
         <!-- email -->
         <div class="text-field">
           <input 
           id="email"
-          type="text" required />
+          type="text"  />
           <label>Email</label>
         </div>
         <!-- password -->
         <div class="text-field">
           <input 
           id="password"
-          type="password" required />
+          type="password"  />
           <label>Password</label>
         </div>
           <!-- confirm password -->
         <div class="text-field">
           <input
           id="confirmPassword"
-           type="password" required />
+           type="password"  />
           <label>Confirm Password</label>
         </div>
         <!-- Profile Image Url -->
@@ -59,11 +58,11 @@
           <label>Add a profile picture link</label>
         </div>
          <!-- date of birth -->
-        <div class="date">
+        <div class="date text-field">
           <input 
           id="dateOfBirth"
-          type="date" required />
-          <label>Date of Birth | DD-MM-DD</label>
+          type="date" max="2012-01-01" min="1950-01-01" />
+          <label>Date of Birth</label>
         </div>
         <input type="submit" value="Sign Up" />
         <div class="signup-link" id="signup-error"></div>
@@ -72,3 +71,8 @@
         </div>
       </form>
     </div>
+    </div>
+    </section>
+
+
+    

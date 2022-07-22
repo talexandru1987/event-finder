@@ -14,15 +14,29 @@ User.hasMany(Events, {
   foreignKey: "user_id",
 });
 
-User.hasMany(Friends);
+Invites.belongsTo(User, {
+  foreignKey: "user_id",
+});
 
-User.hasMany(Messages);
+User.hasMany(Invites, {
+  foreignKey: "user_id",
+});
 
-Messages.belongsTo(User);
+Invites.belongsTo(Events, {
+  foreignKey: "event_id",
+});
 
-User.hasMany(Invites);
+Events.hasMany(Invites, {
+  foreignKey: "event_id",
+});
 
-Invites.belongsTo(User);
+Friends.belongsTo(User, {
+  foreignKey: "friend_id",
+});
+
+User.hasMany(Friends, {
+  foreignKey: "friend_id",
+});
 
 module.exports = {
   Events,

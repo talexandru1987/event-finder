@@ -9,7 +9,8 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <h2 class="dark-purple modal-title" id="exampleModalLabel">Invite Your
+          Friends!</h2>
         <button
           type="button"
           class="btn-close"
@@ -17,28 +18,33 @@
           aria-label="Close"
         ></button>
       </div>
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label
-              for="recipient-name"
-              class="col-form-label"
-            >Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name" />
+      <div
+        class="modal-body d-flex justify-content-center align-items-center"
+        id="friends-container"
+      >
+        {{#each friends}}
+          <div class="card m-2 border border-dark">
+            <img
+              class="img-thumbnail"
+              src="{{profile_img_url}}"
+              alt="{{first_name}} {{last_name}}"
+            />
+            <div class="card-body">
+              <h5 class="card-title text-center">{{first_name}}
+                {{last_name}}</h5>
+              <hr />
+              <p class="card-text text-center">Send this event to
+                {{user_name}}!</p>
+              <div class="text-center mb-3">
+                <button
+                  id="{{id}}"
+                  class="btn btn-dark"
+                  name="invite-friend-btn"
+                >Invite Friend</button>
+              </div>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button
-          type="button"
-          class="btn btn-secondary"
-          data-bs-dismiss="modal"
-        >Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
+        {{/each}}
       </div>
     </div>
   </div>
