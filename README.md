@@ -15,7 +15,7 @@
 
 # Deployed Link
 
-View the What's On app here:
+View the What's On app here: [https://what-is-on.herokuapp.com/](https://what-is-on.herokuapp.com/)
 
 # Description
 
