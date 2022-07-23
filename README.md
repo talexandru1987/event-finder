@@ -39,7 +39,61 @@ SO THAT I can find new places and experiences to enjoy and share them with my fr
 
 ## Tools
 
-Add Wireframes here
+<details>
+<summary>Wireframe - Home page </summary>
+
+![Desktop - Start page](public/assets/images/wire-frames/Event%20finder-%20homepage.jpg)
+
+</details>
+
+<details>
+<summary>Wireframe - Search page - not logged in </summary>
+
+![Desktop - Start page](public/assets/images/wire-frames/event%20finder-%20serach%20page-%20not%20logged%20in.jpg)
+
+</details>
+
+<details>
+<summary>Wireframe - Search page - logged in </summary>
+
+![Desktop - Start page](public/assets/images/wire-frames/event-finder%20search%20page-logged%20in.jpg)
+
+</details>
+
+<details>
+<summary>Wireframe - My events page </summary>
+
+![Desktop - Start page](public/assets/images/wire-frames/event%20finder-%20my%20events%20page.jpg)
+
+</details>
+
+<details>
+<summary>Wireframe - My Invites page </summary>
+
+![Desktop - Start page](./public/assets/images/wire-frames/my%20invites%20page.jpg)
+
+</details>
+
+<details>
+<summary>Wireframe - Contact page </summary>
+
+![Desktop - Start page](public/assets/images/wire-frames/contact%20page.jpg)
+
+</details>
+
+<details>
+<summary>Wireframe - Sign up page </summary>
+
+![Desktop - Start page](./public/assets/images/wire-frames/sign%20up%20page.jpg)
+
+</details>
+
+<details>
+<summary>Wireframe - Log in page </summary>
+
+![Desktop - Start page](./public/assets/images/wire-frames/log%20in%20page.jpg)
+
+</details>
 
 ## Technologies
 
