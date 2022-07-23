@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon src/index.js",
     "seed": "node src/db/seed.js",
-    "start": "node src/index.js"
+    "start": "npm run seed && node src/index.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/talexandru1987/event-finder#readme",
   "dependencies": {
+    "@faker-js/faker": "^7.3.0",
     "axios": "^0.27.2",
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.4",
